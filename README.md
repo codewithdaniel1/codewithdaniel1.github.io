@@ -9,6 +9,8 @@ A personal website for Daniel Peng’s resume, projects, research, open-source c
 - `research.html` — current projects and future research updates.
 - `ctf.html` — OSIRIS Research Lab links, NYUSEC’s CTFtime season snapshot, and future writeups.
 - `CTF_WRITEUP_TEMPLATE.html` — starting point for a new writeup.
+- `portrait-daniel.png` — Daniel's portrait, sourced from his LinkedIn profile with his permission for this site.
+- `styles.css` — the site's warm, nature-inspired visual system.
 
 ## Add future work
 
