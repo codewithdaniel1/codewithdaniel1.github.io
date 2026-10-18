@@ -11,7 +11,7 @@ The main navigation has three pages: **Home**, **Resume**, and **Research**. Eac
 - `research.html` — current projects and future research updates.
 - `ctf.html` — redirects older links to the CTF section of `index.html`.
 - `CTF_WRITEUP_TEMPLATE.html` — starting point for a new writeup.
-- `writeups/fix-your-ship.html` — JerseyCTF VI “Fix Your Ship” forensics walkthrough, with the original challenge files, recovered artifacts, and a Python repair script.
+- `writeups/2026/jerseyctf-vi/fix-your-ship.html` — JerseyCTF VI “Fix Your Ship” forensics walkthrough (April 18–19, 2026), with the original challenge files, recovered artifacts, and a Python repair script.
 - `portrait-daniel.png` — Daniel's portrait, sourced from his LinkedIn profile with his permission for this site.
 - `styles.css` — the site's warm, nature-inspired visual system.
 
@@ -27,10 +27,23 @@ Add a short summary under **Current projects** in `research.html`. Include the q
 
 ### CTF writeups
 
-1. Copy `CTF_WRITEUP_TEMPLATE.html` into a new folder such as `writeups/event-challenge.html`.
-2. Replace the bracketed placeholders and use relative links such as `../styles.css` and `../index.html#ctf`.
+1. Create `writeups/<year>/<event-slug>/` and copy `CTF_WRITEUP_TEMPLATE.html` there as `<challenge-slug>.html`.
+2. Replace the bracketed placeholders and use the template’s `../../../styles.css` and `../../../index.html#ctf` links for site navigation. Keep event-specific files in that event folder (for example, an `assets/` directory).
 3. Add the new article to the Challenge writeups section of `index.html`. Include the event, challenge name, category, and a short summary.
 4. Publish only after the event rules allow it.
+
+Example structure:
+
+```text
+writeups/
+└── 2026/
+    └── jerseyctf-vi/
+        ├── fix-your-ship.html
+        ├── solve_fix_your_ship.py
+        └── assets/
+            ├── original/
+            └── recovered challenge media
+```
 
 The CTF ranking on `index.html` is a dated season snapshot. The linked CTFtime team profile is the source for live standings and event results.
 
