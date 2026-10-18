@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="300" viewBox="0 0 520 300" role="img" aria-labelledby="title desc">
+  <title id="title">Lateral movement graph analysis</title>
+  <desc id="desc">Authentication events connect hosts over time, with one unusual route highlighted in clay.</desc>
+  <defs><pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M28 0H0V28" fill="none" stroke="#d8dbd0" stroke-width=".7"/></pattern></defs>
+  <rect width="520" height="300" fill="#f4f2ea"/><rect width="520" height="300" fill="url(#grid)"/><path d="M54 42h412v218H54z" fill="#faf9f4" stroke="#cdd2c5"/>
+  <text x="74" y="66" fill="#24352c" font-family="IBM Plex Mono,monospace" font-size="10" letter-spacing="1.5">AUTHENTICATION EVENTS / GRAPH VIEW</text>
+  <g fill="#4f5e54" font-family="IBM Plex Mono,monospace" font-size="9" letter-spacing="1"><text x="82" y="114">HOST A</text><text x="222" y="166">HOST B</text><text x="374" y="112">HOST C</text><text x="82" y="219">HOST D</text></g>
+  <g fill="none" stroke="#b7c1b2" stroke-width="1.5"><path d="M105 132 244 178M105 132 395 132M244 178 395 132M105 232 244 178M244 178 395 132"/><path d="M105 132 105 232" stroke-dasharray="3 5"/></g>
+  <path d="M105 132 244 178 395 132" fill="none" stroke="#a37157" stroke-width="3"/><g fill="#496a53" stroke="#faf9f4" stroke-width="5"><circle cx="105" cy="132" r="11"/><circle cx="244" cy="178" r="12"/><circle cx="395" cy="132" r="11"/><circle cx="105" cy="232" r="8"/></g><circle cx="244" cy="178" r="4" fill="#a37157"/>
+  <path d="M80 246h348" stroke="#cdd2c5"/><path d="M80 241v10M196 241v10M312 241v10M428 241v10" stroke="#718368"/><g fill="#4f5e54" font-family="IBM Plex Mono,monospace" font-size="8"><text x="80" y="258">EARLIER</text><text x="399" y="258">LATER</text></g>
+</svg>

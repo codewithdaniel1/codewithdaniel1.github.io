@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="300" viewBox="0 0 520 300" role="img" aria-labelledby="title desc">
+  <title id="title">CyberWorkbench security tools</title>
+  <desc id="desc">A modular work surface groups file inspection, network analysis, notes, and utility tools.</desc>
+  <defs><pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse"><path d="M30 0H0V30" fill="none" stroke="#d4d8ce" stroke-width=".7"/></pattern></defs>
+  <rect width="520" height="300" fill="#e8e9df"/><rect width="520" height="300" fill="url(#grid)"/>
+  <path d="M38 42h444v206H38z" fill="#faf9f4" stroke="#cdd2c5"/><path d="M38 78h444" stroke="#cdd2c5"/><text x="58" y="65" fill="#24352c" font-family="IBM Plex Mono,monospace" font-size="10" letter-spacing="1.5">CYBERWORKBENCH / TOOLKIT</text>
+  <g fill="#496a53" font-family="IBM Plex Mono,monospace" font-size="9" letter-spacing="1"><text x="62" y="107">FILES</text><text x="284" y="107">NETWORK</text><text x="62" y="204">NOTES</text><text x="284" y="204">UTILITIES</text></g>
+  <g fill="#f4f2ea" stroke="#cdd2c5"><rect x="58" y="118" width="184" height="64"/><rect x="264" y="118" width="198" height="64"/><rect x="58" y="214" width="184" height="22"/><rect x="264" y="214" width="198" height="22"/></g>
+  <g fill="#718368"><path d="M76 137h18v24H76z"/><path d="M80 132h10v5H80z"/><circle cx="124" cy="144" r="5"/><circle cx="156" cy="153" r="5"/><circle cx="192" cy="138" r="5"/></g>
+  <g fill="none" stroke="#a37157" stroke-width="1.5"><path d="m124 144 32 9 36-15"/><path d="m284 155 38-25 36 16 47-22"/></g><g fill="#496a53"><circle cx="284" cy="155" r="5"/><circle cx="322" cy="130" r="5"/><circle cx="358" cy="146" r="5"/><circle cx="405" cy="124" r="5"/></g>
+  <path d="M74 224h44M74 230h92" stroke="#718368" stroke-width="2" stroke-linecap="round"/><g fill="#a37157"><rect x="284" y="223" width="28" height="7"/><rect x="321" y="223" width="44" height="7"/><rect x="374" y="223" width="31" height="7"/></g>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="300" viewBox="0 0 520 300" role="img" aria-labelledby="title desc">
+  <title id="title">NowEDA dataset exploration</title>
+  <desc id="desc">A data profile view pairs a sample table with completeness bars and a distribution chart.</desc>
+  <defs><pattern id="grid" width="26" height="26" patternUnits="userSpaceOnUse"><path d="M26 0H0V26" fill="none" stroke="#d8dbd0" stroke-width=".7"/></pattern></defs>
+  <rect width="520" height="300" fill="#ebe6d9"/><rect width="520" height="300" fill="url(#grid)"/>
+  <rect x="34" y="28" width="452" height="244" fill="#faf9f4" stroke="#cdd2c5"/>
+  <path d="M34 66h452" stroke="#cdd2c5"/><circle cx="52" cy="47" r="4" fill="#a37157"/><circle cx="68" cy="47" r="4" fill="#718368"/><text x="88" y="51" fill="#24352c" font-family="IBM Plex Mono,monospace" font-size="11" letter-spacing="1.5">NOWEDA / DATA PROFILE</text>
+  <g fill="#4f5e54" font-family="IBM Plex Mono,monospace" font-size="9" letter-spacing=".8"><text x="52" y="88">SAMPLE ROWS</text><text x="52" y="111">COLUMN A</text><text x="52" y="137">COLUMN B</text><text x="52" y="163">COLUMN C</text><text x="52" y="189">COLUMN D</text><text x="52" y="228">DISTRIBUTION</text><text x="324" y="88">COMPLETENESS</text></g>
+  <g stroke="#d8dbd0"><path d="M52 98h270M52 124h270M52 150h270M52 176h270M52 202h270M318 98v104"/></g>
+  <g fill="#718368"><rect x="330" y="103" width="118" height="8"/><rect x="330" y="129" width="94" height="8"/><rect x="330" y="155" width="137" height="8"/><rect x="330" y="181" width="74" height="8"/></g><g fill="#a37157"><rect x="448" y="103" width="22" height="8"/><rect x="424" y="129" width="46" height="8"/><rect x="404" y="181" width="66" height="8"/></g>
+  <path d="M52 254h410" stroke="#cdd2c5"/><g fill="#496a53"><rect x="74" y="246" width="16" height="8"/><rect x="105" y="236" width="16" height="18"/><rect x="136" y="224" width="16" height="30"/><rect x="167" y="218" width="16" height="36"/><rect x="198" y="231" width="16" height="23"/><rect x="229" y="239" width="16" height="15"/><rect x="260" y="246" width="16" height="8"/></g>
+</svg>

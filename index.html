@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=20261018a" />
+  <link rel="stylesheet" href="styles.css?v=20261018b" />
   <script src="script.js" defer></script>
 </head>
 <body>
@@ -66,58 +66,17 @@
           <p>An interactive map and dataset for exploring cyber actors described in public reporting.</p>
           <a class="under-link" href="https://cyberactoratlas.pages.dev/">Explore the atlas</a>
         </div>
-        <figure class="atlas-illustration" role="img" aria-label="Illustrative map of relationships between actors, reports, and campaigns">
-          <svg viewBox="0 0 520 330" aria-hidden="true" focusable="false">
-            <defs>
-              <pattern id="atlas-grid" width="32" height="32" patternUnits="userSpaceOnUse">
-                <path d="M32 0H0V32" fill="none" stroke="#cdd2c5" stroke-width=".7" />
-              </pattern>
-            </defs>
-            <rect width="520" height="330" fill="#f4f2ea" />
-            <rect width="520" height="330" fill="url(#atlas-grid)" />
-            <path d="M-20 250C62 202 107 253 163 222s93-9 131-58 111-49 246-5M-20 285c81-51 132-6 194-44s90-17 128-61 99-39 232 1M-15 203c76-43 128 9 184-21s87-11 129-60 98-48 237-7" fill="none" stroke="#b7c1b2" stroke-width="1.2" />
-            <g stroke="#a37157" stroke-width="1.5" opacity=".72">
-              <path d="M104 106 216 154 338 92 418 194 286 244 216 154 286 244 104 106" fill="none" />
-              <path d="M338 92 418 194" fill="none" stroke-dasharray="4 6" />
-            </g>
-            <g fill="#496a53" stroke="#faf9f4" stroke-width="5">
-              <circle cx="104" cy="106" r="10" /><circle cx="216" cy="154" r="12" /><circle cx="338" cy="92" r="9" /><circle cx="418" cy="194" r="11" /><circle cx="286" cy="244" r="8" />
-            </g>
-            <g fill="#24352c" font-family="IBM Plex Mono, monospace" font-size="10" letter-spacing="1.3">
-              <text x="72" y="83">ACTOR</text><text x="190" y="133">REPORT</text><text x="311" y="70">CAMPAIGN</text><text x="392" y="222">SOURCE</text>
-              <text x="28" y="303" fill="#718368">PUBLIC REPORTING / RELATIONSHIP VIEW</text>
-            </g>
-            <g fill="#a37157"><circle cx="163" cy="222" r="3" /><circle cx="385" cy="128" r="3" /><circle cx="250" cy="94" r="2.5" /></g>
-          </svg>
+        <figure class="atlas-illustration">
+          <img src="assets/projects/cyber-actor-atlas.svg" width="520" height="300" alt="Schematic map connecting cyber actors, reports, campaigns, and sources" />
           <figcaption>Schematic view of actors, reports, and relationships</figcaption>
         </figure>
       </article>
-      <div class="project-list">
-        <article class="project-row">
-          <div><h3>NowEDA</h3><p class="project-category">Python · Data tools</p></div>
-          <p>A starting point for exploring a dataset, generating summaries, and spotting quality issues.</p>
-          <a class="project-link" href="https://github.com/codewithdaniel1/NowEDA" aria-label="View NowEDA on GitHub">GitHub</a>
-        </article>
-        <article class="project-row">
-          <div><h3>CyberSLM</h3><p class="project-category">AI · Security</p></div>
-          <p>A local language model workspace for cybersecurity tasks.</p>
-          <a class="project-link" href="https://github.com/codewithdaniel1/CyberSLM" aria-label="View CyberSLM on GitHub">GitHub</a>
-        </article>
-        <article class="project-row">
-          <div><h3>CyberWorkbench</h3><p class="project-category">Open source · Security tools</p></div>
-          <p>Utilities for security research and CTF practice, gathered in one workspace.</p>
-          <a class="project-link" href="https://github.com/codewithdaniel1/CyberWorkbench" aria-label="View CyberWorkbench on GitHub">GitHub</a>
-        </article>
-        <article class="project-row">
-          <div><h3>Lateral Movement Detection</h3><p class="project-category">Security research · Graph analytics</p></div>
-          <p>Using graph analytics to study unusual behavior in authentication events.</p>
-          <a class="project-link" href="https://github.com/codewithdaniel1/lateral-movement-detection" aria-label="View Lateral Movement Detection on GitHub">GitHub</a>
-        </article>
-        <article class="project-row">
-          <div><h3>Explainable AML Monitoring</h3><p class="project-category">Data science · Financial crime</p></div>
-          <p>Comparing explainable signals for reviewing synthetic transaction activity.</p>
-          <a class="project-link" href="https://github.com/codewithdaniel1/Explainable-AML-Transaction-Monitoring" aria-label="View Explainable AML Monitoring on GitHub">GitHub</a>
-        </article>
+      <div class="project-grid">
+        <article class="project-card"><a class="project-card-visual" href="https://github.com/codewithdaniel1/NowEDA"><img src="assets/projects/noweda.svg" width="520" height="300" alt="Dataset profiling schematic with sample rows, completeness bars, and a distribution chart" loading="lazy" /></a><div class="project-card-copy"><p class="project-category">PYTHON · DATA TOOLS</p><h3><a href="https://github.com/codewithdaniel1/NowEDA">NowEDA</a></h3><p>A starting point for exploring a dataset, generating summaries, and spotting quality issues.</p><a class="under-link" href="https://github.com/codewithdaniel1/NowEDA">View on GitHub</a></div></article>
+        <article class="project-card"><a class="project-card-visual" href="https://github.com/codewithdaniel1/CyberSLM"><img src="assets/projects/cyberslm.svg" width="520" height="300" alt="Local AI security workspace schematic with a prompt panel and shield illustration" loading="lazy" /></a><div class="project-card-copy"><p class="project-category">AI · SECURITY</p><h3><a href="https://github.com/codewithdaniel1/CyberSLM">CyberSLM</a></h3><p>A local language model workspace for cybersecurity tasks.</p><a class="under-link" href="https://github.com/codewithdaniel1/CyberSLM">View on GitHub</a></div></article>
+        <article class="project-card"><a class="project-card-visual" href="https://github.com/codewithdaniel1/CyberWorkbench"><img src="assets/projects/cyberworkbench.svg" width="520" height="300" alt="Security research workbench schematic with modular file, network, notes, and utility panels" loading="lazy" /></a><div class="project-card-copy"><p class="project-category">OPEN SOURCE · SECURITY TOOLS</p><h3><a href="https://github.com/codewithdaniel1/CyberWorkbench">CyberWorkbench</a></h3><p>Utilities for security research and CTF practice, gathered in one workspace.</p><a class="under-link" href="https://github.com/codewithdaniel1/CyberWorkbench">View on GitHub</a></div></article>
+        <article class="project-card"><a class="project-card-visual" href="https://github.com/codewithdaniel1/lateral-movement-detection"><img src="assets/projects/lateral-movement.svg" width="520" height="300" alt="Authentication event graph highlighting an unusual route between hosts" loading="lazy" /></a><div class="project-card-copy"><p class="project-category">SECURITY RESEARCH · GRAPH ANALYTICS</p><h3><a href="https://github.com/codewithdaniel1/lateral-movement-detection">Lateral Movement Detection</a></h3><p>Using graph analytics to study unusual behavior in authentication events.</p><a class="under-link" href="https://github.com/codewithdaniel1/lateral-movement-detection">View on GitHub</a></div></article>
+        <article class="project-card"><a class="project-card-visual" href="https://github.com/codewithdaniel1/Explainable-AML-Transaction-Monitoring"><img src="assets/projects/explainable-aml.svg" width="520" height="300" alt="Transaction network schematic paired with an evidence and explanation panel" loading="lazy" /></a><div class="project-card-copy"><p class="project-category">DATA SCIENCE · FINANCIAL CRIME</p><h3><a href="https://github.com/codewithdaniel1/Explainable-AML-Transaction-Monitoring">Explainable AML Monitoring</a></h3><p>Comparing explainable signals for reviewing synthetic transaction activity.</p><a class="under-link" href="https://github.com/codewithdaniel1/Explainable-AML-Transaction-Monitoring">View on GitHub</a></div></article>
       </div>
       <p class="section-followup">Looking for the research behind these projects? <a class="inline-link" href="research.html">Read about my research</a></p>
     </section>

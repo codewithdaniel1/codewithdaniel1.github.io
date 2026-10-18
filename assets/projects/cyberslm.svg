@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="300" viewBox="0 0 520 300" role="img" aria-labelledby="title desc">
+  <title id="title">CyberSLM local security workspace</title>
+  <desc id="desc">A private local model workspace pairs an analysis prompt with a shield and response outline.</desc>
+  <defs><pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M28 0H0V28" fill="none" stroke="#33483d" stroke-width=".7"/></pattern></defs>
+  <rect width="520" height="300" fill="#24352c"/><rect width="520" height="300" fill="url(#grid)"/>
+  <rect x="28" y="26" width="464" height="248" rx="3" fill="#faf9f4" stroke="#cdd2c5"/>
+  <rect x="28" y="26" width="464" height="38" fill="#e8e9df"/><circle cx="48" cy="45" r="4" fill="#a37157"/><circle cx="64" cy="45" r="4" fill="#718368"/><text x="86" y="49" fill="#24352c" font-family="IBM Plex Mono,monospace" font-size="10" letter-spacing="1.2">CYBERSLM / LOCAL WORKSPACE</text>
+  <path d="M182 64v210" stroke="#cdd2c5"/><text x="48" y="92" fill="#496a53" font-family="IBM Plex Mono,monospace" font-size="9" letter-spacing="1">SESSION</text>
+  <g fill="#4f5e54" font-family="DM Sans,Arial,sans-serif" font-size="12"><text x="48" y="121">Security review</text><text x="48" y="148">Model library</text><text x="48" y="175">Local files</text></g><path d="M44 105h122" stroke="#cdd2c5"/><path d="M44 132h122M44 159h122M44 186h122" stroke="#e8e9df"/>
+  <text x="208" y="92" fill="#496a53" font-family="IBM Plex Mono,monospace" font-size="9" letter-spacing="1">ANALYSIS SESSION</text>
+  <rect x="208" y="106" width="242" height="48" rx="2" fill="#e8e9df"/><text x="222" y="127" fill="#24352c" font-family="DM Sans,Arial,sans-serif" font-size="11">Review the alert evidence</text><text x="222" y="143" fill="#4f5e54" font-family="DM Sans,Arial,sans-serif" font-size="10">Keep analysis on this device</text>
+  <rect x="208" y="168" width="206" height="70" rx="2" fill="#f4f2ea" stroke="#cdd2c5"/><path d="M224 186h150M224 198h132M224 210h142M224 222h88" stroke="#718368" stroke-width="3" stroke-linecap="round"/>
+  <path d="M447 182l21 8v18c0 15-11 24-21 30-10-6-21-15-21-30v-18z" fill="#496a53"/><path d="m437 206 7 7 14-16" fill="none" stroke="#faf9f4" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

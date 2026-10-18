@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="300" viewBox="0 0 520 300" role="img" aria-labelledby="title desc">
+  <title id="title">Cyber Actor Atlas relationship map</title>
+  <desc id="desc">A schematic network connects actors, reports, campaigns, and sources over contour lines.</desc>
+  <defs>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#cdd2c5" stroke-width=".7"/></pattern>
+  </defs>
+  <rect width="520" height="300" fill="#f4f2ea"/>
+  <rect width="520" height="300" fill="url(#grid)"/>
+  <g fill="none" stroke="#b7c1b2" stroke-width="1.2"><path d="M-20 218C62 170 107 221 163 190s93-9 131-58 111-49 246-5"/><path d="M-20 253c81-51 132-6 194-44s90-17 128-61 99-39 232 1"/><path d="M-15 171c76-43 128 9 184-21s87-11 129-60 98-48 237-7"/></g>
+  <g fill="none" stroke="#a37157" stroke-width="1.6" opacity=".78"><path d="m104 74 112 48 122-62 80 102-132 50-70-90-72-48"/><path d="m338 60 80 102" stroke-dasharray="4 6"/></g>
+  <g fill="#496a53" stroke="#faf9f4" stroke-width="5"><circle cx="104" cy="74" r="10"/><circle cx="216" cy="122" r="12"/><circle cx="338" cy="60" r="9"/><circle cx="418" cy="162" r="11"/><circle cx="286" cy="212" r="8"/></g>
+  <g fill="#24352c" font-family="IBM Plex Mono,monospace" font-size="10" letter-spacing="1.3"><text x="72" y="51">ACTOR</text><text x="190" y="101">REPORT</text><text x="311" y="38">CAMPAIGN</text><text x="392" y="190">SOURCE</text><text x="28" y="272" fill="#718368">PUBLIC REPORTING / RELATIONSHIP VIEW</text></g>
+  <g fill="#a37157"><circle cx="163" cy="190" r="3"/><circle cx="385" cy="96" r="3"/><circle cx="250" cy="62" r="2.5"/></g>
+</svg>
