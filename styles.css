@@ -143,6 +143,9 @@ h1, h2, h3, h4 { text-wrap: balance; }
 .entry-list .under-link { grid-column: 1 / -1; justify-self: start; min-height: 32px; }
 .tag-list { display: flex; flex-wrap: wrap; gap: 8px; }
 .tag-list span { padding: 6px 10px; border: 1px solid var(--rule); color: var(--ink-soft); font-size: 13px; }
+.toolkit-groups { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 24px 28px; }
+.toolkit-group { min-width: 0; }
+.toolkit-group h3 { margin: 0 0 12px; color: var(--moss); font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; }
 .page-actions { margin-top: 20px; gap: 10px 22px; }
 .page-actions .inline-link { font-size: 14px; overflow-wrap: anywhere; }
 .resume-intro { display: grid; grid-template-columns: minmax(0,1fr); align-items: start; }
@@ -175,6 +178,7 @@ h1, h2, h3, h4 { text-wrap: balance; }
   .about-section, .inner-section { grid-template-columns: 170px minmax(0,1fr); gap: 28px; }
   .research-card { min-height: 0; }
   .entry-list li { display: block; }
+  .toolkit-groups { gap: 20px; }
   .entry-meta { display: block; margin: 8px 0; }
   .entry-list p { margin-top: 8px; }
 }
@@ -214,6 +218,7 @@ h1, h2, h3, h4 { text-wrap: balance; }
   .inner-hero h1 { font-size: 50px; }
   .inner-hero .lead { font-size: 16px; }
   .inner-section { grid-template-columns: 1fr; gap: 20px; padding-block: 28px; }
+  .toolkit-groups { grid-template-columns: 1fr; gap: 22px; }
   .inner-section h2 { font-size: 30px; }
   .entry-list p { font-size: 15px; }
   .resume-intro { grid-template-columns: minmax(0,1fr) 72px; gap: 18px; }
