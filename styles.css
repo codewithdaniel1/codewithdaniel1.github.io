@@ -78,18 +78,9 @@ h1, h2, h3, h4 { text-wrap: balance; }
 .atlas-illustration figcaption { padding: 8px 12px; border-top: 1px solid var(--rule); color: var(--ink-soft); font-size: 11px; }
 .project-showcase { margin-bottom: 24px; }
 .section-followup { margin: 22px 0 0; color: var(--ink-soft); font-size: 14px; }
-.ctf-section { padding-block: 56px 64px; background: var(--sand); border-block: 1px solid var(--rule); }
 .ctf-content { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 64px; padding-top: 28px; border-top: 1px solid var(--rule); }
-.ctf-team-content { grid-template-columns: minmax(0,1.15fr) minmax(280px,.85fr); align-items: stretch; gap: 48px; }
-.ctf-team-intro { display: flex; align-items: center; }
-.ctf-team-intro p { max-width: 610px; margin: 0; font-size: 20px; line-height: 1.8; }
-.ctf-ranking-panel { display: flex; flex-direction: column; justify-content: center; padding: 26px 30px; border-left: 2px solid var(--clay); background: var(--paper-light); }
 .ctf-content h3 { margin: 0 0 14px; font: 600 30px/1.1 var(--serif); }
 .ctf-content p { color: var(--ink-soft); font-size: 15px; }
-.stat-grid { display: grid; grid-template-columns: 1fr; max-width: 200px; margin: 0 0 14px; }
-.stat-grid > div { padding: 0; }
-.stat-number { display: block; color: var(--moss); font: 500 60px/1 var(--serif); }
-.stat-label { display: block; margin-top: 6px; color: var(--ink-soft); font-size: 15px; }
 .quiet-note { color: var(--ink-soft); font-size: 12px !important; line-height: 1.7; }
 .paper-note { padding: 24px; border-left: 2px solid var(--olive); background: var(--paper-light); }
 .paper-note h3, .paper-note h4 { margin: 0 0 10px; font: 600 25px/1.2 var(--serif); }
@@ -194,7 +185,7 @@ h1, h2, h3, h4 { text-wrap: balance; }
   .hero .social-links { margin-top: 8px; }
   .page-nav { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 0 14px; padding-block: 12px; }
   .page-nav > span { grid-column: 1 / -1; margin-bottom: 3px; }
-  .work-section, .about-section, .ctf-section { padding-block: 38px 44px; }
+  .work-section, .about-section { padding-block: 38px 44px; }
   .section-heading { align-items: start; flex-direction: column; gap: 6px; margin-bottom: 18px; }
   .section-heading h2, .about-section h2 { font-size: 40px; }
   .section-heading p { font-size: 15px; }
