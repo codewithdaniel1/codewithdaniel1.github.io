@@ -65,6 +65,7 @@ h1, h2, h3, h4 { text-wrap: balance; }
 .section-heading { display: flex; justify-content: space-between; align-items: end; gap: 24px; margin-bottom: 25px; }
 .section-heading h2, .about-section h2 { margin: 0 0 9px; font: 500 48px/1.05 var(--serif); letter-spacing: -.035em; }
 .section-heading p { max-width: 700px; margin: 0; color: var(--ink-soft); }
+.section-heading .writeups-description { font-size: 14px; }
 .section-heading > .under-link { flex-shrink: 0; }
 .featured-project { display: grid; grid-template-columns: minmax(0,.9fr) minmax(0,1.1fr); gap: 34px; align-items: center; margin: 0 0 34px; padding: 28px; border: 1px solid var(--rule); border-left: 3px solid var(--clay); background: var(--paper-light); }
 .featured-project-copy { padding: 8px 0 8px 4px; }
