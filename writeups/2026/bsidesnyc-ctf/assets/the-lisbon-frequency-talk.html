@@ -1,8 +1,258 @@
-<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Talk: The Lisbon Frequency | CipherWiki archive</title><style>:root{--ink:#26332d;--muted:#59675f;--paper:#f4f2ea;--card:#fffef9;--line:#d7d9cc;--green:#456c56;--gold:#a87049}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.7 Georgia,serif}.wrap{max-width:820px;margin:auto;padding:36px 24px}header,footer{border-bottom:1px solid var(--line);padding-bottom:24px}.eyebrow,.meta,footer{font:13px/1.6 Arial,sans-serif;color:var(--muted)}.eyebrow{text-transform:uppercase;letter-spacing:.14em;color:var(--green)}h1{font-size:clamp(2.2rem,6vw,3.5rem);font-weight:500;line-height:1.1}h2{font-weight:500;margin-top:2rem}.notice,.post{background:var(--card);border:1px solid var(--line);padding:20px 24px;margin:20px 0}.notice{border-left:4px solid var(--gold)}.post h3{font:700 12px Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--green);margin:0}blockquote{margin:10px 0 0;padding-left:18px;border-left:2px solid var(--line)}a{color:var(--green);text-underline-offset:4px}code{font:.9em ui-monospace,monospace;background:#eeece3;padding:2px 5px}.clue{overflow-wrap:anywhere}footer{border:0;border-top:1px solid var(--line);margin-top:40px;padding-top:18px}</style></head>
-<body><main class="wrap"><header><p class="eyebrow">CipherWiki · Talk page archive</p><h1>Talk: <i>The Lisbon Frequency</i> (1967)</h1><p class="meta">Local archive of challenge evidence for BSidesNYC CTF, “Classified.”</p></header>
-<section class="notice"><b>Archive notice</b><br>Earlier discussion about Derek Poole’s credit was moved to the Canon Disputes board.</section>
-<h2>Derek Poole’s credit</h2><article class="post"><h3>Morthwaite · 3 March 2024, 11:15</h3><blockquote>Derek Poole has no film credits before or after <i>The Lisbon Frequency</i>. He was brought in specifically for second-unit dialogue, which explains his place in the production record without a broader filmography.</blockquote></article>
-<article class="post"><h3>Canon Disputes · archived discussion</h3><p>Contributors debate whether Poole should count as a cast credit or a production specialist. The lack of any other credits and his narrowly defined dialogue work support the latter reading.</p></article>
-<h2>Other discussions</h2><article class="post"><h3>Lisbon locations</h3><p>The location thread compares the film with real Lisbon settings, including places described as intelligence-community haunts.</p></article><article class="post"><h3>Audio quality</h3><p>Another thread discusses the surviving audio and how dialogue sits within the background mix.</p></article>
-<h2>Source clue</h2><p>The page source contains this unusual rule:</p><article class="post clue"><code>.docref { #2f636c61737369666965642f6f63372e68746d6c; }</code><p>Reading the hexadecimal bytes as ASCII gives <code>/classified/oc7.html</code>.</p></article><p><a href="oc7-memo.html">Continue to the archived OC-7 memo →</a></p><footer>Challenge evidence archive · This local copy keeps the walkthrough independent of the original host.</footer></main></body></html>
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Talk: The Lisbon Frequency (1967) — CipherWiki</title>
+<link rel="stylesheet" href="./cipherwiki-style.css">
+<style>
+.talk-page { max-width: 860px; }
+.thread { margin-bottom: 28px; border-left: 3px solid #a2a9b1; padding-left: 14px; }
+.thread .reply { margin-top: 12px; border-left: 3px solid #dce3ec; padding-left: 12px; margin-left: 16px; }
+.thread .reply .reply { border-left-color: #eaecf0; margin-left: 16px; }
+.post-header { font-size: 12px; color: #54595d; margin-bottom: 4px; font-family: 'Share Tech Mono', monospace; }
+.post-header .username { font-weight: 700; color: #3366cc; font-size: 13px; }
+.post-header .username.bot { color: #888; }
+.post-header .username.sentinel { color: #2c5f2e; }
+.post-header .username.truthteller { color: #8b1a1a; }
+.post-header .username.mod { color: #6600aa; }
+.post-body { font-size: 13.5px; line-height: 1.65; color: #202122; margin-bottom: 2px; }
+.post-body .sig { color: #72777d; font-size: 12px; font-style: italic; }
+.section-header {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 18px;
+  font-weight: 400;
+  border-bottom: 1px solid #a2a9b1;
+  padding-bottom: 3px;
+  margin: 28px 0 14px;
+}
+.new-section-btn {
+  float: right;
+  font-size: 12px;
+  color: #3366cc;
+  text-decoration: none;
+  margin-top: 4px;
+}
+.talk-notice {
+  background: #eaf3fb;
+  border: 1px solid #7ab4d8;
+  border-radius: 2px;
+  padding: 8px 12px;
+  font-size: 12.5px;
+  margin-bottom: 18px;
+  color: #202122;
+}
+.ctf-placeholder {
+  background: #fff8dc;
+  border: 1px dashed #ccaa00;
+  border-radius: 2px;
+  padding: 6px 10px;
+  font-size: 12px;
+  color: #7a6200;
+  font-family: 'Share Tech Mono', monospace;
+  margin: 4px 0;
+}
+.timestamp { color: #72777d; }
+.docref { #2f636c61737369666965642f6f63372e68746d6c; }
+.archived { background: #f8f8f8; border: 1px solid #ddd; padding: 6px 10px; font-size: 12px; color: #72777d; border-radius: 2px; margin-bottom: 14px; }
+</style>
+</head>
+<body>
+<div class="topbar">
+  <div class="topbar-left">
+    <a href="https://ctf313.com/cipher-wiki/index.html"><strong>CipherWiki</strong></a>
+    <a href="#">Create account</a>
+    <a href="#">Log in</a>
+  </div>
+  <span>The Unofficial CIPHER Franchise Encyclopedia</span>
+</div>
+<div class="site-header">
+  <div class="header-inner">
+    <div class="logo-wrap">
+      <div class="logo-gem">◆</div>
+      <div>
+        <div class="logo-title"><a href="https://ctf313.com/cipher-wiki/index.html" style="color:#000;text-decoration:none">CipherWiki</a></div>
+        <div class="logo-subtitle">The Unofficial CIPHER Franchise Encyclopedia</div>
+      </div>
+    </div>
+    <div class="header-search"><input type="text" placeholder="Search CipherWiki…"></div>
+  </div>
+  <div class="page-tabs" style="max-width:1180px;margin:0 auto;padding-left:170px;display:flex;gap:2px;">
+    <a class="tab" href="https://ctf313.com/cipher-wiki/films/f02.html">Article</a>
+    <a class="tab active" href="#">Talk</a>
+    <a class="tab" href="#">Edit</a>
+    <a class="tab" href="#">History</a>
+  </div>
+</div>
+<div class="page-wrap">
+<nav class="left-nav">
+  <h4>Wiki</h4><ul>
+  <li><a href="https://ctf313.com/cipher-wiki/index.html">Main Page</a></li>
+  <li><a href="https://ctf313.com/cipher-wiki/films/index.html">All Films</a></li>
+  <li><a href="https://ctf313.com/cipher-wiki/characters/ward.html">Characters</a></li>
+  <li><a href="https://ctf313.com/cipher-wiki/org/hexon.html">HEXON</a></li>
+  <li><a href="https://ctf313.com/cipher-wiki/org/sentinel.html">Sentinel</a></li>
+  </ul>
+  <h4>Actors</h4><ul>
+  <li><a href="https://ctf313.com/cipher-wiki/actors/cavender.html">Hugh Cavender</a></li>
+  <li><a href="https://ctf313.com/cipher-wiki/actors/mace.html">Roland Mace</a></li>
+  <li><a href="https://ctf313.com/cipher-wiki/actors/bauer.html">Stefan Bauer</a></li>
+  <li><a href="https://ctf313.com/cipher-wiki/actors/calloway.html">James Calloway</a></li>
+  <li><a href="https://ctf313.com/cipher-wiki/actors/obi.html">Marcus Obi</a></li>
+  </ul>
+  <h4>Films</h4><ul>
+  <li><a href="https://ctf313.com/cipher-wiki/films/f01.html">Shadow and Steel</a></li>
+  <li><a href="https://ctf313.com/cipher-wiki/films/f02.html">The Lisbon Frequency</a></li>
+  <li><a href="https://ctf313.com/cipher-wiki/films/f03.html">Agent Alone</a></li>
+  <li><a href="https://ctf313.com/cipher-wiki/films/f04.html">Crimson Meridian</a></li>
+  <li><a href="https://ctf313.com/cipher-wiki/films/f05.html">The Ivory Gambit</a></li>
+  <li><a href="https://ctf313.com/cipher-wiki/films/f06.html">Dead Reckoning</a></li>
+  <li><a href="https://ctf313.com/cipher-wiki/films/f07.html">Shallow Graves</a></li>
+  <li><a href="https://ctf313.com/cipher-wiki/films/f08.html">After the Wall</a></li>
+  <li><a href="https://ctf313.com/cipher-wiki/films/f09.html">Zero Meridian</a></li>
+  <li><a href="https://ctf313.com/cipher-wiki/films/f10.html">Blacksite</a></li>
+  <li><a href="https://ctf313.com/cipher-wiki/films/f11.html">The Sovereign Gamble</a></li>
+  <li><a href="https://ctf313.com/cipher-wiki/films/f12.html">Pale Fire</a></li>
+  <li><a href="https://ctf313.com/cipher-wiki/films/f13.html">No Such Agency</a></li>
+  <li><a href="https://ctf313.com/cipher-wiki/films/f14.html">Fracture Point</a></li>
+  <li><a href="https://ctf313.com/cipher-wiki/films/f15.html">The Last Directorate</a></li>
+  </ul>
+</nav>
+<div class="main-content talk-page">
+<div class="page-title">Talk: The Lisbon Frequency (1967)</div>
+<div class="talk-notice">
+  This is the talk page for <strong>The Lisbon Frequency (1967)</strong>. Use it to discuss improvements to the article.
+  New sections go at the bottom. Sign your posts with <code>~~~~</code>. Be excellent to each other.
+</div>
+<div class="archived">📦 Archive: Earlier discussions about the Derek Poole credit have been moved to the Canon Disputes board.</div><div class="section-header">The HEXON naming scene — soft canon debate</div>
+<div class="thread">
+
+<div class="post-header">
+  <span class="username ">VaelArchiveMod</span>
+  <span class="timestamp"> — 3 Mar 2024, 09:00</span>
+</div>
+<div class="post-body">Flagging this again for new editors: the article correctly identifies the HEXON expansion as 'soft canon, contested.' Please don't change this to 'non-canon' or 'confirmed canon.' The community position after the 2021 debate is 'soft canon.' That's where we're staying until there's new evidence either way. — <span class="sig">VaelArchiveMod</span></div>
+<div class="reply">
+<div class="post-header">
+  <span class="username ">BrumbyFilm</span>
+  <span class="timestamp"> — 3 Mar 2024, 09:44</span>
+</div>
+<div class="post-body">Agreed. The soft canon designation is the right call. Nikolai's 'we have no name' line is in Film 1. The expansion is in Film 2. Both are on screen. Both are canon in some sense. The franchise has simply chosen not to resolve the contradiction and that's fine. — <span class="sig">BrumbyFilm</span></div>
+</div><div class="reply">
+<div class="post-header">
+  <span class="username ">GlassEelFan</span>
+  <span class="timestamp"> — 3 Mar 2024, 10:22</span>
+</div>
+<div class="post-body">My read has always been that Poole just made it up for that scene and nobody caught it in script review. It's a throwaway line by a minor character. I doubt it means anything. — <span class="sig">GlassEelFan</span></div>
+</div><div class="reply">
+<div class="post-header">
+  <span class="username ">Morthwaite</span>
+  <span class="timestamp"> — 3 Mar 2024, 11:15</span>
+</div>
+<div class="post-body">Derek Poole has no film credits before or after The Lisbon Frequency. He was brought in specifically for second-unit dialogue. I've never found a satisfying explanation of where he came from or where he went. For what it's worth. — <span class="sig">Morthwaite</span></div>
+</div><div class="reply"><div class="reply">
+<div class="post-header">
+  <span class="username ">IsabellaKT</span>
+  <span class="timestamp"> — 3 Mar 2024, 11:48</span>
+</div>
+<div class="post-body">Morthwaite you say this every time this thread comes up. He was a session writer. They didn't always have industry careers. It was very common in the 60s to pull in people from advertising, radio, journalism. — <span class="sig">IsabellaKT</span></div>
+</div></div><div class="reply"><div class="reply">
+<div class="post-header">
+  <span class="username ">Morthwaite</span>
+  <span class="timestamp"> — 3 Mar 2024, 12:20</span>
+</div>
+<div class="post-body">I know. I'm noting it for completeness.  — <span class="sig">Morthwaite</span></div>
+</div></div>
+</div><div class="section-header">Portuguese locations — are they accurate?</div>
+<div class="thread">
+
+<div class="post-header">
+  <span class="username ">WardWatcher_99</span>
+  <span class="timestamp"> — 11 Mar 2024, 18:30</span>
+</div>
+<div class="post-body">Anyone know Lisbon well enough to confirm whether the locations are accurate to 1967? The café scenes look right to me from photos but I've never been. — <span class="sig">WardWatcher_99</span></div>
+<div class="reply">
+<div class="post-header">
+  <span class="username ">ClaireD1965</span>
+  <span class="timestamp"> — 11 Mar 2024, 19:14</span>
+</div>
+<div class="post-body">I've been to Lisbon twice and the street they use for the final chase is definitely real — it's near the Alfama district. The café I'm less sure about. Some of it looks like it was shot at Pinewood with a Lisbon-themed set.  — <span class="sig">ClaireD1965</span></div>
+</div><div class="reply">
+<div class="post-header">
+  <span class="username ">pellucid_k</span>
+  <span class="timestamp"> — 12 Mar 2024, 07:55</span>
+</div>
+<div class="post-body">The exterior of the café is real. I can confirm the address. The interior was Pinewood. The production used a location scout with unusually detailed knowledge of Lisbon's intelligence-community haunts, according to a 1967 production diary I found in a film archive. That phrase — 'intelligence-community haunts' — was presumably journalistic colour but I thought it was an interesting choice of words. — <span class="sig">pellucid_k</span></div>
+</div><div class="reply"><div class="reply">
+<div class="post-header">
+  <span class="username ">BrumbyFilm</span>
+  <span class="timestamp"> — 12 Mar 2024, 08:44</span>
+</div>
+<div class="post-body">That is an odd phrase for a 1967 production diary. Which archive? — <span class="sig">BrumbyFilm</span></div>
+</div></div><div class="reply"><div class="reply">
+<div class="post-header">
+  <span class="username ">pellucid_k</span>
+  <span class="timestamp"> — 12 Mar 2024, 09:30</span>
+</div>
+<div class="post-body">BFI. It's in the Forsythe papers. Available on request. — <span class="sig">pellucid_k</span></div>
+</div></div>
+</div><div class="section-header">Audio Quality?</div>
+<div class="thread">
+
+<div class="post-header">
+  <span class="username ">Morthwaite</span>
+  <span class="timestamp"> — 16 Mar 2024, 15:23</span>
+</div>
+<div class="post-body">Audio quality of the film's theme song attached to the article has a sort of... abyssal resonance? A fathomless pitch. Hard to describe. A subterranean tone? — <span class="sig">Morthwaite</span></div>
+<div class="reply">
+<div class="post-header">
+  <span class="username ">ClaireD1965</span>
+  <span class="timestamp"> — 17 Mar 2024, 16:17</span>
+</div>
+<div class="post-body">I don't notice anything wrong with it.  — <span class="sig">ClaireD1965</span></div>
+</div><div class="reply">
+<div class="post-header">
+  <span class="username ">Morthwaite</span>
+  <span class="timestamp"> — 21 Mar 2024, 07:55</span>
+</div>
+<div class="post-body">Trust me, it's there. A benthic echo. — <span class="sig">Morthwaite</span></div>
+</div><div class="reply"><div class="reply">
+</div></div>
+</div>
+</div>
+<aside class="right-sidebar">
+  <div class="sidebar-box">
+    <div class="sidebar-box-title">Talk Guidelines</div>
+    <div class="sidebar-note">Keep discussion focused on improving the article. Fan debate is welcome but please stay civil. Speculation about real-world events is off-topic and will be removed.</div>
+  </div>
+  <div class="sidebar-box">
+    <div class="sidebar-box-title">Active Users</div>
+    <ul>
+      <li>GlassEelFan</li>
+      <li>WardWatcher_99</li>
+      <li>Morthwaite</li>
+      <li>BrumbyFilm</li>
+      <li>ClaireD1965</li>
+      <li>IsabellaKT</li>
+	  <li>Mortedamos</li>
+	  <li>SecureKomodo</li>
+	  <li>nullspace</li>
+	  <li>KashMunee</li>
+	  <li>n3tl0kr</li>
+	  <li>JohnAllen</li>
+	  <li>NinjaDoom</li>
+	  <li>DOfDoomChamp</li>
+	  <li>Kybele</li>
+	  <li>FredMayRulz</li>
+	  <li>Ph1shH00k</li>
+      <li>VaelArchiveMod</li>	
+    </ul>
+  </div>
+</aside>
+</div>
+<div class="wiki-footer">
+  CipherWiki is an unofficial fan encyclopaedia not affiliated with Meridian Pictures or the Halcyon Group. ·
+  <a href="#">Privacy</a> · <a href="#">About</a> · <a href="#">Disclaimers</a>
+</div>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092" integrity="sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==" data-cf-beacon="{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;9ea67adc6036417fa753e866e56e412e&quot;,&quot;r&quot;:1,&quot;spa&quot;:2}" crossorigin="anonymous"></script>
+
+</body></html>
