@@ -146,6 +146,8 @@ h1, h2, h3, h4 { text-wrap: balance; }
 .toolkit-groups { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 24px 28px; }
 .toolkit-group { min-width: 0; }
 .toolkit-group h3 { margin: 0 0 12px; color: var(--moss); font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; }
+.open-source-list { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 0 26px; margin: 0; padding: 0; border-top: 1px solid var(--rule); list-style: none; }
+.open-source-list li { padding: 11px 0; border-bottom: 1px solid var(--rule); color: var(--ink-soft); font-size: 15px; }
 .page-actions { margin-top: 20px; gap: 10px 22px; }
 .page-actions .inline-link { font-size: 14px; overflow-wrap: anywhere; }
 .resume-intro { display: grid; grid-template-columns: minmax(0,1fr); align-items: start; }
@@ -179,6 +181,7 @@ h1, h2, h3, h4 { text-wrap: balance; }
   .research-card { min-height: 0; }
   .entry-list li { display: block; }
   .toolkit-groups { gap: 20px; }
+  .open-source-list { gap: 0 18px; }
   .entry-meta { display: block; margin: 8px 0; }
   .entry-list p { margin-top: 8px; }
 }
@@ -219,6 +222,7 @@ h1, h2, h3, h4 { text-wrap: balance; }
   .inner-hero .lead { font-size: 16px; }
   .inner-section { grid-template-columns: 1fr; gap: 20px; padding-block: 28px; }
   .toolkit-groups { grid-template-columns: 1fr; gap: 22px; }
+  .open-source-list { grid-template-columns: 1fr; }
   .inner-section h2 { font-size: 30px; }
   .entry-list p { font-size: 15px; }
   .resume-intro { grid-template-columns: minmax(0,1fr) 72px; gap: 18px; }
