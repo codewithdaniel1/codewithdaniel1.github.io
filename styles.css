@@ -99,7 +99,6 @@ h1, h2, h3, h4 { text-wrap: balance; }
 .writeup-card h3 a:hover, .writeup-card h4 a:hover { color: var(--moss); text-decoration-color: var(--moss); }
 .writeup-card .writeup-kicker { margin: 0 0 8px; color: var(--moss); font-size: 11px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; }
 .writeup-card .under-link { margin-top: 13px; }
-.archive-year { margin: 0 0 18px; padding-bottom: 12px; border-bottom: 1px solid var(--rule); font: 500 43px/1 var(--serif); }
 .ctf-event { min-width: 0; padding: 22px 24px 12px; border-top: 2px solid var(--olive); background: var(--paper-light); }
 .ctf-event-header { display: flex; justify-content: space-between; align-items: baseline; gap: 14px; margin-bottom: 18px; }
 .ctf-event-header h3 { margin: 0; font: 600 29px/1.1 var(--serif); }
