@@ -90,6 +90,11 @@ h1, h2, h3, h4 { text-wrap: balance; }
 .paper-note { padding: 24px; border-left: 2px solid var(--olive); background: var(--paper-light); }
 .paper-note h3, .paper-note h4 { margin: 0 0 10px; font: 600 25px/1.2 var(--serif); }
 .paper-note p { margin: 0; }
+.writeup-card { border-left-color: var(--clay); }
+.writeup-card h4 a { text-decoration: underline; text-decoration-color: var(--rule); text-underline-offset: 4px; }
+.writeup-card h4 a:hover { color: var(--moss); text-decoration-color: var(--moss); }
+.writeup-card .writeup-kicker { margin: 0 0 8px; color: var(--moss); font-size: 11px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; }
+.writeup-card .under-link { margin-top: 13px; }
 .about-section { display: grid; grid-template-columns: 220px minmax(0,1fr); gap: 48px; }
 .about-section p { max-width: 750px; color: var(--ink-soft); }
 .contact-section { padding-block: 42px; background: var(--stone); border-top: 1px solid var(--rule); }
@@ -135,6 +140,18 @@ h1, h2, h3, h4 { text-wrap: balance; }
 .prose li { padding: 5px 0; }
 .prose pre { overflow-x: auto; padding: 20px; border: 1px solid var(--rule); background: var(--stone); font: 13px/1.6 var(--mono); }
 .prose .section-content a { color: var(--moss); text-decoration: underline; text-underline-offset: 4px; }
+.writeup-callout { margin: 22px 0; padding: 20px 22px; border-left: 2px solid var(--clay); background: var(--paper-light); }
+.writeup-callout p:last-child { margin-bottom: 0; }
+.writeup-figure { margin: 24px 0; }
+.writeup-figure img, .writeup-video { width: 100%; border: 1px solid var(--rule); background: var(--stone); }
+.writeup-figure figcaption { padding-top: 9px; color: var(--ink-soft); font-size: 13px; }
+.writeup-table-wrap { overflow-x: auto; margin-block: 20px; }
+.writeup-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.writeup-table th, .writeup-table td { padding: 11px 13px; border: 1px solid var(--rule); text-align: left; vertical-align: top; }
+.writeup-table th { background: var(--stone); font-weight: 600; }
+.writeup-downloads { display: flex; flex-wrap: wrap; gap: 10px 22px; margin-top: 20px; }
+.writeup-downloads a { display: inline-flex; align-items: center; min-height: 44px; }
+.writeup-flag { overflow-wrap: anywhere; }
 @media (max-width: 900px) {
   .wrap { width: calc(100% - 48px); }
   .hero { grid-template-columns: minmax(0,1fr) 210px; gap: 35px; }

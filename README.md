@@ -11,6 +11,7 @@ The main navigation has three pages: **Home**, **Resume**, and **Research**. Eac
 - `research.html` — current projects and future research updates.
 - `ctf.html` — redirects older links to the CTF section of `index.html`.
 - `CTF_WRITEUP_TEMPLATE.html` — starting point for a new writeup.
+- `writeups/fix-your-ship.html` — JerseyCTF VI “Fix Your Ship” forensics walkthrough, with recovered artifacts and a Python repair script.
 - `portrait-daniel.png` — Daniel's portrait, sourced from his LinkedIn profile with his permission for this site.
 - `styles.css` — the site's warm, nature-inspired visual system.
 
@@ -28,7 +29,7 @@ Add a short summary under **Current projects** in `research.html`. Include the q
 
 1. Copy `CTF_WRITEUP_TEMPLATE.html` into a new folder such as `writeups/event-challenge.html`.
 2. Replace the bracketed placeholders and use relative links such as `../styles.css` and `../index.html#ctf`.
-3. Replace the empty state in the Challenge writeups section of `index.html` with a link to the new article. Include the event, challenge name, category, and date.
+3. Add the new article to the Challenge writeups section of `index.html`. Include the event, challenge name, category, and a short summary.
 4. Publish only after the event rules allow it.
 
 The CTF ranking on `index.html` is a dated season snapshot. The linked CTFtime team profile is the source for live standings and event results.
