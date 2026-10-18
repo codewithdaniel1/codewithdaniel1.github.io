@@ -7,7 +7,7 @@ The main navigation has three pages: **Home**, **Resume**, and **Research**. Eac
 ## Site map
 
 - `index.html` — **Home**: introduction, projects, OSIRIS/NYUSEC CTF standings, future writeups, and contact links.
-- `resume.html` — education, research community, projects, open-source work, and interests.
+- `resume.html` — experience, education, selected projects, technical toolkit, awards, and open-source work.
 - `research.html` — current projects and future research updates.
 - `ctf.html` — redirects older links to the CTF section of `index.html`.
 - `CTF_WRITEUP_TEMPLATE.html` — starting point for a new writeup.
