@@ -11,7 +11,7 @@ The main navigation has three pages: **Home**, **Resume**, and **Research**. Eac
 - `research.html` — current projects and future research updates.
 - `ctf.html` — redirects older links to the CTF section of `index.html`.
 - `CTF_WRITEUP_TEMPLATE.html` — starting point for a new writeup.
-- `writeups/fix-your-ship.html` — JerseyCTF VI “Fix Your Ship” forensics walkthrough, with recovered artifacts and a Python repair script.
+- `writeups/fix-your-ship.html` — JerseyCTF VI “Fix Your Ship” forensics walkthrough, with the original challenge files, recovered artifacts, and a Python repair script.
 - `portrait-daniel.png` — Daniel's portrait, sourced from his LinkedIn profile with his permission for this site.
 - `styles.css` — the site's warm, nature-inspired visual system.
 
