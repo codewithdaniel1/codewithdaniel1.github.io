@@ -25,7 +25,7 @@
   </header>
 
   <main class="inner-main wrap prose" id="main">
-    <a class="back-link" href="../../../index.html#ctf">← All CTF writeups</a>
+    <a class="back-link" href="../../../index.html#ctf"> All CTF writeups</a>
     <header class="inner-hero">
       <p class="section-index">CTF WRITEUP / JERSEYCTF VI</p>
       <div>
@@ -38,7 +38,7 @@
     <section class="inner-section" aria-labelledby="challenge-title">
       <h2 id="challenge-title">The challenge</h2>
       <div class="section-content">
-        <p>JerseyCTF VI ran from April 18 at 19:00 UTC to April 19 at 19:00 UTC. <a class="inline-link" href="https://ctftime.org/event/3117">See the event on CTFtime ↗</a> · <a class="inline-link" href="https://ctftime.org/writeup/41137">View this writeup on CTFtime ↗</a></p>
+        <p>JerseyCTF VI ran from April 18 at 19:00 UTC to April 19 at 19:00 UTC. <a class="inline-link" href="https://ctftime.org/event/3117">See the event on CTFtime</a> · <a class="inline-link" href="https://ctftime.org/writeup/41137">View this writeup on CTFtime</a></p>
         <p>The prompt describes a crashed ship and three corrupted schematic files. It gives one important starting point: <code>file1</code> is a PNG. Once recovered, that image should tell us how to open the other files.</p>
         <p>The downloads have no useful extensions. The goal is to identify their formats from their bytes, repair the damaged parts, and follow the clues in each recovered artifact.</p>
         <div class="writeup-callout"><p><strong>Approach:</strong> inspect the headers and endings first, change only bytes that the format and clues justify, then verify each repaired artifact before moving on.</p></div>
@@ -147,9 +147,9 @@ ffprobe -v error -show_entries format=duration,format_name \
       <div class="section-content">
         <p>These are the three files as they were provided in the challenge: unchanged, extensionless, and still corrupted. Use them with the repair commands or the Python solver below.</p>
         <div class="writeup-downloads">
-          <a class="under-link" href="assets/original/file1" download>Original file1 · damaged PNG ↓</a>
-          <a class="under-link" href="assets/original/file2" download>Original file2 · damaged JPEG ↓</a>
-          <a class="under-link" href="assets/original/file3" download>Original file3 · damaged MP4 ↓</a>
+          <a class="under-link" href="assets/original/file1" download>Original file1 · damaged PNG</a>
+          <a class="under-link" href="assets/original/file2" download>Original file2 · damaged JPEG</a>
+          <a class="under-link" href="assets/original/file3" download>Original file3 · damaged MP4</a>
         </div>
       </div>
     </section>
@@ -160,10 +160,10 @@ ffprobe -v error -show_entries format=duration,format_name \
         <p>The included Python script checks that each expected damaged byte sequence is present before writing a repaired copy. It leaves the original files untouched and uses only Python’s standard library.</p>
         <pre><code>python3 solve_fix_your_ship.py assets/original/file1 assets/original/file2 assets/original/file3 --out repaired</code></pre>
         <div class="writeup-downloads">
-          <a class="under-link" href="solve_fix_your_ship.py" download>Download Python repair script ↓</a>
-          <a class="under-link" href="assets/fix-your-ship-schematic.png" download>Recovered PNG ↓</a>
-          <a class="under-link" href="assets/fix-your-ship-engine.jpg" download>Recovered JPEG ↓</a>
-          <a class="under-link" href="assets/fix-your-ship-recovered.mp4" download>Recovered MP4 ↓</a>
+          <a class="under-link" href="solve_fix_your_ship.py" download>Download Python repair script</a>
+          <a class="under-link" href="assets/fix-your-ship-schematic.png" download>Recovered PNG</a>
+          <a class="under-link" href="assets/fix-your-ship-engine.jpg" download>Recovered JPEG</a>
+          <a class="under-link" href="assets/fix-your-ship-recovered.mp4" download>Recovered MP4</a>
         </div>
         <div class="writeup-callout"><p><strong>Verification note:</strong> the flag is reconstructed from the supplied challenge artifacts and the repaired media was inspected locally. I have not independently confirmed an online scoreboard submission.</p></div>
         <p>The useful lesson is simple: corruption does not always mean the whole file is lost. A few format-specific bytes can be enough to make the original content readable again. Start with what the file says about itself, follow evidence between artifacts, and keep repairs as small and verifiable as possible.</p>
@@ -171,6 +171,6 @@ ffprobe -v error -show_entries format=duration,format_name \
     </section>
   </main>
 
-  <footer class="site-footer"><div class="wrap footer-inner"><span>Daniel Peng · New York</span><a href="../../../index.html#ctf">All CTF writeups →</a></div></footer>
+  <footer class="site-footer"><div class="wrap footer-inner"><span>Daniel Peng · New York</span><a href="../../../index.html#ctf">All CTF writeups</a></div></footer>
 </body>
 </html>
