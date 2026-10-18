@@ -77,9 +77,8 @@ h1, h2, h3, h4 { text-wrap: balance; }
 .ctf-content { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 64px; padding-top: 28px; border-top: 1px solid var(--rule); }
 .ctf-content h3 { margin: 0 0 14px; font: 600 30px/1.1 var(--serif); }
 .ctf-content p { color: var(--ink-soft); font-size: 15px; }
-.stat-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); max-width: 370px; margin: 20px 0 12px; border: 1px solid var(--rule); background: var(--paper-light); }
+.stat-grid { display: grid; grid-template-columns: 1fr; max-width: 200px; margin: 20px 0 12px; border: 1px solid var(--rule); background: var(--paper-light); }
 .stat-grid > div { padding: 20px 22px; }
-.stat-grid > div + div { border-left: 1px solid var(--rule); }
 .stat-number { display: block; color: var(--moss); font: 600 40px/1 var(--serif); }
 .stat-label { display: block; margin-top: 5px; color: var(--ink-soft); font-size: 12px; }
 .quiet-note { color: var(--ink-soft); font-size: 12px !important; line-height: 1.7; }
