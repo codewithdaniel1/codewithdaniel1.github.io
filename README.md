@@ -4,10 +4,10 @@ A personal website for Daniel Peng’s resume, projects, research, open-source c
 
 ## Site map
 
-- `index.html` — introduction, selected projects, and links to the rest of the site.
+- `index.html` — **Everything else**: introduction, projects, OSIRIS/NYUSEC CTF standings, future writeups, and contact links.
 - `resume.html` — print-friendly profile and resume; use **Print / Save PDF** to export a PDF in the browser.
 - `research.html` — current projects and future research updates.
-- `ctf.html` — OSIRIS Research Lab links, NYUSEC’s CTFtime season snapshot, and future writeups.
+- `ctf.html` — redirects older links to the CTF section of `index.html`.
 - `CTF_WRITEUP_TEMPLATE.html` — starting point for a new writeup.
 - `portrait-daniel.png` — Daniel's portrait, sourced from his LinkedIn profile with his permission for this site.
 - `styles.css` — the site's warm, nature-inspired visual system.
@@ -16,7 +16,7 @@ A personal website for Daniel Peng’s resume, projects, research, open-source c
 
 ### Projects
 
-Add a project card in the project grid in `index.html` and a matching entry under Selected projects in `resume.html`. Link directly to the source or live demo.
+Add a project row in `index.html` and a matching entry under Selected projects in `resume.html`. Link directly to the source or live demo.
 
 ### Research
 
@@ -25,11 +25,11 @@ Add a short summary under **Current work** in `research.html`. Include the quest
 ### CTF writeups
 
 1. Copy `CTF_WRITEUP_TEMPLATE.html` into a new folder such as `writeups/event-challenge.html`.
-2. Replace the bracketed placeholders and use relative links such as `../styles.css` and `../ctf.html`.
-3. Add a link to the new article in the Writeups section of `ctf.html`.
+2. Replace the bracketed placeholders and use relative links such as `../styles.css` and `../index.html#ctf`.
+3. Add a link to the new article in the Writeups section of `index.html`.
 4. Publish only after the event rules allow it.
 
-The `ctf.html` ranking is a dated season snapshot. The linked CTFtime team profile is the source for live standings and event results.
+The CTF ranking on `index.html` is a dated season snapshot. The linked CTFtime team profile is the source for live standings and event results.
 
 ## Publish with GitHub Pages
 
