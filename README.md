@@ -2,13 +2,12 @@
 
 A personal website for Daniel Peng’s resume, projects, research, open-source contributions, and CTF writeups. It is a lightweight static site built with HTML, CSS, and JavaScript.
 
-The main navigation has four pages: **Home**, **Project**, **Research**, and **CTF**. Home brings together the introduction and professional experience; Project contains selected work and open-source contributions. `resume.html` redirects to the experience section on Home for compatibility with older links.
+The main navigation has four pages: **Home**, **Project**, **Research**, and **CTF**. Home brings together the introduction and professional experience; Project contains selected work and open-source contributions.
 
 ## Site map
 
 - `index.html` - **Home**: introduction, experience, education, awards, technical toolkit, and professional profile links.
-- `projects.html` - **Project**: selected projects and open-source contributions.
-- `resume.html` - compatibility redirect to the experience section on Home.
+- `project.html` - **Project**: selected projects and open-source contributions.
 - `research.html` - research focus areas and future research updates.
 - `ctf.html` - NYUSEC CTF results and challenge writeups.
 - `CTF_WRITEUP_TEMPLATE.html` - starting point for a new writeup.
@@ -21,7 +20,7 @@ The main navigation has four pages: **Home**, **Project**, **Research**, and **C
 
 ### Projects
 
-Add a project showcase to `projects.html`. Link directly to the source, package page, or live demo.
+Add a project showcase to `project.html`. Link directly to the source, package page, or live demo.
 
 ### Research
 
