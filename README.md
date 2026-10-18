@@ -12,6 +12,9 @@ The main navigation has four pages: **Home**, **Project**, **Research**, and **C
 - `ctf.html` - NYUSEC CTF results and challenge writeups.
 - `CTF_WRITEUP_TEMPLATE.html` - starting point for a new writeup.
 - `writeups/2026/jerseyctf-vi/fix-your-ship.html` - JerseyCTF VI “Fix Your Ship” forensics walkthrough (April 18-19, 2026), with the original challenge files, recovered artifacts, and a Python repair script.
+- `writeups/2026/jerseyctf-vi/recovered-signal-file.html` - JerseyCTF VI Base64 and Caesar-shift decoding walkthrough.
+- `writeups/2026/jerseyctf-vi/qastah-nuq.html` - JerseyCTF VI PCAP and HTTP payload analysis walkthrough.
+- `writeups/2026/jerseyctf-vi/relay-artifact-tx-7.html` - JerseyCTF VI RSA prime-reuse cryptography walkthrough.
 - `writeups/2026/bsidesnyc-ctf/classified.html` - BSidesNYC CTF “Classified” walkthrough (October 17, 2026), tracing a hex-encoded document path to a hidden flag.
 - `portrait-daniel.png` - Daniel's portrait, sourced from his LinkedIn profile with his permission for this site.
 - `styles.css` - the site's warm, nature-inspired visual system.
