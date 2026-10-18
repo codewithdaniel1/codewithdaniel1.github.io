@@ -2,16 +2,17 @@
 
 A personal website for Daniel Peng’s resume, projects, research, open-source contributions, and CTF writeups. It is a lightweight static site built with HTML, CSS, and JavaScript.
 
-The main navigation has three pages: **Home**, **Resume**, and **Research**. Each page has section shortcuts. Home contains Projects, CTF & writeups, About, and Contact.
+The main navigation has three pages: **Home**, **Resume**, and **Research**. Each page has section shortcuts. Home contains Projects, CTF & writeups, and About.
 
 ## Site map
 
-- `index.html` — **Home**: introduction, projects, OSIRIS/NYUSEC CTF standings, future writeups, and contact links.
+- `index.html` — **Home**: introduction, projects, OSIRIS/NYUSEC CTF standings, writeups, and professional profile links.
 - `resume.html` — experience, education, selected projects, technical toolkit, awards, and open-source work.
 - `research.html` — current projects and future research updates.
 - `ctf.html` — redirects older links to the CTF section of `index.html`.
 - `CTF_WRITEUP_TEMPLATE.html` — starting point for a new writeup.
 - `writeups/2026/jerseyctf-vi/fix-your-ship.html` — JerseyCTF VI “Fix Your Ship” forensics walkthrough (April 18–19, 2026), with the original challenge files, recovered artifacts, and a Python repair script.
+- `writeups/2026/bsidesnyc-ctf/classified.html` — BSidesNYC CTF “Classified” walkthrough (October 17, 2026), tracing a hex-encoded document path to a hidden flag.
 - `portrait-daniel.png` — Daniel's portrait, sourced from his LinkedIn profile with his permission for this site.
 - `styles.css` — the site's warm, nature-inspired visual system.
 
@@ -37,6 +38,8 @@ Example structure:
 ```text
 writeups/
 └── 2026/
+    ├── bsidesnyc-ctf/
+    │   └── classified.html
     └── jerseyctf-vi/
         ├── fix-your-ship.html
         ├── solve_fix_your_ship.py
