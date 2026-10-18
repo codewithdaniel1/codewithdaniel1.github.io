@@ -36,25 +36,26 @@
       </div>
     </header>
 
-    <section class="inner-section" aria-labelledby="challenge-title">
+    <nav class="page-nav" aria-label="Writeup sections"><span>Jump to</span><a href="#challenge">Challenge</a><a href="#discussion">Poole discussion</a><a href="#source">Page source</a><a href="#memo">OC-7 memo</a><a href="#flag">Flag</a></nav>
+
+    <section class="inner-section" id="challenge" aria-labelledby="challenge-title">
       <h2 id="challenge-title">The challenge</h2>
       <div class="section-content">
         <p>The prompt says a persistent mole is using the talk pages of CipherWiki to exfiltrate information about “retired” Agent Poole. It asks us to find the flag in the information being leaked.</p>
         <p>The challenge points to a fictional wiki about the CIPHER films. That framing suggests treating the talk pages as an investigative trail: look for discussions of Poole, follow any references to archived material, then inspect the pages those references lead to.</p>
-        
       </div>
     </section>
 
-    <section class="inner-section" aria-labelledby="poole-title">
+    <section class="inner-section" id="discussion" aria-labelledby="poole-title">
       <h2 id="poole-title">Find the Poole discussion</h2>
       <div class="section-content">
-        <p>Start with the talk page for <a class="inline-link" href="assets/the-lisbon-frequency-talk.html"><em>The Lisbon Frequency</em></a>. The discussion describes Derek Poole as an unusual figure in the film’s production history: he had no film credits before or after this movie and was brought in specifically for second-unit dialogue.</p>
+        <p>Start with the archived local copy of the talk page for <a class="inline-link" href="assets/the-lisbon-frequency-talk.html"><em>The Lisbon Frequency</em></a>. The discussion describes Derek Poole as an unusual figure in the film’s production history: he had no film credits before or after this movie and was brought in specifically for second-unit dialogue.</p>
         <p>That detail makes the word “retired” feel like a clue rather than background flavor. An archive notice on the page adds a direction: earlier discussion about Poole was moved to the Canon Disputes board. The talk page is not the final destination; it tells us that relevant information has been filed elsewhere.</p>
         <div class="writeup-callout"><p><strong>Clue to carry forward:</strong> Poole’s discussion was moved to an archive. While inspecting the current page, its source also contains a document reference that is not presented as an ordinary link.</p></div>
       </div>
     </section>
 
-    <section class="inner-section" aria-labelledby="source-title">
+    <section class="inner-section" id="source" aria-labelledby="source-title">
       <h2 id="source-title">Inspect the page source</h2>
       <div class="section-content">
         <p>Viewing the HTML reveals an unusual rule associated with the <code>docref</code> class:</p>
@@ -68,17 +69,17 @@
       </div>
     </section>
 
-    <section class="inner-section" aria-labelledby="memo-title">
+    <section class="inner-section" id="memo" aria-labelledby="memo-title">
       <h2 id="memo-title">Read the OC-7 memo</h2>
       <div class="section-content">
-        <p>Open the decoded path at <a class="inline-link" href="assets/oc7-memo.html">the OC-7 memo</a>. The memo discusses the CIPHER production series and includes a section about the Poole incident.</p>
+        <p>Open the decoded path in the <a class="inline-link" href="assets/oc7-memo.html">local OC-7 memo copy</a>. The memo discusses the CIPHER production series and includes a section about the Poole incident.</p>
         <p>The flag is present in the document’s HTML inside an element with the <code>ghost-text</code> class:</p>
         <pre><code>&lt;div class="ghost-text"&gt;FLAG = C321A&lt;/div&gt;</code></pre>
         <p>When a page includes content that is hidden or styled unusually, inspect the document source as well as the visible page. Here the flag is directly readable in the markup once the memo has been found.</p>
       </div>
     </section>
 
-    <section class="inner-section" aria-labelledby="flag-title">
+    <section class="inner-section" id="flag" aria-labelledby="flag-title">
       <h2 id="flag-title">Flag</h2>
       <div class="section-content">
         <p>The archived discussion identifies the trail, the malformed CSS rule carries a hex-encoded path, and the memo’s source reveals the flag:</p>

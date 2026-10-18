@@ -4,17 +4,17 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#f4f2ea" />
-  <meta name="description" content="Daniel Peng | Cybersecurity and AI researcher working across security and data science. Projects, research, and professional background." />
-  <meta property="og:title" content="Daniel Peng | Cybersecurity & Data Science" />
-  <meta property="og:description" content="My Projects, research, and professional background." />
+  <meta name="description" content="Daniel Peng | Cybersecurity and AI researcher. Selected projects, research, and CTF writeups." />
+  <meta property="og:title" content="Daniel Peng | Cybersecurity and AI Research" />
+  <meta property="og:description" content="Selected projects, research, and CTF writeups." />
   <meta property="og:image" content="https://codewithdaniel1.github.io/portrait-daniel.png" />
   <meta property="og:type" content="website" />
-  <title>Daniel Peng | Cybersecurity & Data Science</title>
+  <title>Daniel Peng | Cybersecurity and AI Research</title>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=20261017d" />
+  <link rel="stylesheet" href="styles.css?v=20261018a" />
   <script src="script.js" defer></script>
 </head>
 <body>
@@ -25,7 +25,8 @@
       <nav class="site-nav" aria-label="Main navigation">
         <a href="index.html" aria-current="page">Home</a>
         <a href="resume.html">Resume</a>
-        <a href="research.html">Research</a><a href="ctf.html">CTF</a>
+        <a href="research.html">Research</a>
+        <a href="ctf.html">CTF</a>
       </nav>
     </div>
   </header>
@@ -33,9 +34,8 @@
   <main id="main">
     <section class="hero wrap" aria-labelledby="hero-title">
       <div class="hero-copy">
-        
         <h1 id="hero-title">Daniel Peng<span class="period">.</span></h1>
-        <p class="hero-role">Cybersecurity & data science · NYU</p>
+        <p class="hero-role">Cybersecurity and AI researcher · NYU</p>
         <p class="hero-lede">I’m a cybersecurity and AI researcher in New York. I build security and data tools, contribute to open source, and work with the OSIRIS Research Lab.</p>
         <div class="social-links" aria-label="Connect with Daniel">
           <a href="https://www.linkedin.com/in/d-p-/">LinkedIn</a>
@@ -51,21 +51,48 @@
     <nav class="page-nav wrap" aria-label="On this page">
       <span>Jump to</span>
       <a href="#work">Projects</a>
-
       <a href="#about">About</a>
     </nav>
 
     <section class="work-section wrap" id="work" aria-labelledby="work-title">
       <div class="section-heading">
-        <div><h2 id="work-title">Projects</h2><p>Tools and experiments in security, software, and data.</p></div>
+        <div><h2 id="work-title">Selected work</h2><p>Projects across cybersecurity, AI, and data.</p></div>
         <a class="under-link" href="https://github.com/codewithdaniel1?tab=repositories">All repositories</a>
       </div>
+      <article class="featured-project" aria-labelledby="atlas-title">
+        <div class="featured-project-copy">
+          <p class="project-category">FEATURED PROJECT · THREAT INTELLIGENCE</p>
+          <h3 id="atlas-title"><a href="https://cyberactoratlas.pages.dev/">Cyber Actor Atlas</a></h3>
+          <p>An interactive map and dataset for exploring cyber actors described in public reporting.</p>
+          <a class="under-link" href="https://cyberactoratlas.pages.dev/">Explore the atlas</a>
+        </div>
+        <figure class="atlas-illustration" role="img" aria-label="Illustrative map of relationships between actors, reports, and campaigns">
+          <svg viewBox="0 0 520 330" aria-hidden="true" focusable="false">
+            <defs>
+              <pattern id="atlas-grid" width="32" height="32" patternUnits="userSpaceOnUse">
+                <path d="M32 0H0V32" fill="none" stroke="#cdd2c5" stroke-width=".7" />
+              </pattern>
+            </defs>
+            <rect width="520" height="330" fill="#f4f2ea" />
+            <rect width="520" height="330" fill="url(#atlas-grid)" />
+            <path d="M-20 250C62 202 107 253 163 222s93-9 131-58 111-49 246-5M-20 285c81-51 132-6 194-44s90-17 128-61 99-39 232 1M-15 203c76-43 128 9 184-21s87-11 129-60 98-48 237-7" fill="none" stroke="#b7c1b2" stroke-width="1.2" />
+            <g stroke="#a37157" stroke-width="1.5" opacity=".72">
+              <path d="M104 106 216 154 338 92 418 194 286 244 216 154 286 244 104 106" fill="none" />
+              <path d="M338 92 418 194" fill="none" stroke-dasharray="4 6" />
+            </g>
+            <g fill="#496a53" stroke="#faf9f4" stroke-width="5">
+              <circle cx="104" cy="106" r="10" /><circle cx="216" cy="154" r="12" /><circle cx="338" cy="92" r="9" /><circle cx="418" cy="194" r="11" /><circle cx="286" cy="244" r="8" />
+            </g>
+            <g fill="#24352c" font-family="IBM Plex Mono, monospace" font-size="10" letter-spacing="1.3">
+              <text x="72" y="83">ACTOR</text><text x="190" y="133">REPORT</text><text x="311" y="70">CAMPAIGN</text><text x="392" y="222">SOURCE</text>
+              <text x="28" y="303" fill="#718368">PUBLIC REPORTING / RELATIONSHIP VIEW</text>
+            </g>
+            <g fill="#a37157"><circle cx="163" cy="222" r="3" /><circle cx="385" cy="128" r="3" /><circle cx="250" cy="94" r="2.5" /></g>
+          </svg>
+          <figcaption>Schematic view of actors, reports, and relationships</figcaption>
+        </figure>
+      </article>
       <div class="project-list">
-        <article class="project-row">
-          <div><h3>Cyber Actor Atlas</h3><p class="project-category">Threat intelligence · Open data</p></div>
-          <p>A map and dataset for exploring cyber actors described in public reporting.</p>
-          <a class="project-link" href="https://cyberactoratlas.pages.dev/" aria-label="Visit Cyber Actor Atlas">Live site</a>
-        </article>
         <article class="project-row">
           <div><h3>NowEDA</h3><p class="project-category">Python · Data tools</p></div>
           <p>A starting point for exploring a dataset, generating summaries, and spotting quality issues.</p>
@@ -95,12 +122,11 @@
       <p class="section-followup">Looking for the research behind these projects? <a class="inline-link" href="research.html">Read about my research</a></p>
     </section>
 
-
     <section class="about-section wrap" id="about" aria-labelledby="about-title">
       <h2 id="about-title">About me</h2>
       <div>
-        <p>I like figuring out why something works, and what happens when it doesn’t. That curiosity has led me toward cybersecurity, data science, and building tools that make both easier to explore.</p>
-        <p>At NYU, I’m part of the <a class="inline-link" href="https://osiris.cyber.nyu.edu/">OSIRIS Research Lab</a>. Outside the lab, I work on open-source projects and contribute to tools I use.</p>
+        <p>I like turning a vague question into something I can inspect. That might mean tracing an unusual authentication pattern through a graph, repairing a file one byte at a time in a CTF, or building a tool that removes repetitive work.</p>
+        <p>At NYU, I’m part of the <a class="inline-link" href="https://osiris.cyber.nyu.edu/">OSIRIS Research Lab</a>. Outside the lab, I contribute to open-source tools and work on projects of my own.</p>
       </div>
     </section>
 

@@ -26,7 +26,7 @@
   </header>
 
   <main class="inner-main wrap prose" id="main">
-    <a class="back-link" href="../../../ctf.html"> All CTF writeups</a>
+    <a class="back-link" href="../../../ctf.html">All CTF writeups</a>
     <header class="inner-hero">
       <p class="section-index">CTF WRITEUP / JERSEYCTF VI</p>
       <div>
@@ -36,7 +36,9 @@
       </div>
     </header>
 
-    <section class="inner-section" aria-labelledby="challenge-title">
+    <nav class="page-nav" aria-label="Writeup sections"><span>Jump to</span><a href="#challenge">Challenge</a><a href="#overview">File overview</a><a href="#png">PNG</a><a href="#jpeg">JPEG</a><a href="#mp4">MP4</a><a href="#flag">Flag</a><a href="#originals">Original files</a><a href="#reproduce">Reproduce</a></nav>
+
+    <section class="inner-section" id="challenge" aria-labelledby="challenge-title">
       <h2 id="challenge-title">The challenge</h2>
       <div class="section-content">
         <p>JerseyCTF VI ran from April 18 at 19:00 UTC to April 19 at 19:00 UTC. <a class="inline-link" href="https://ctftime.org/event/3117">See the event on CTFtime</a> · <a class="inline-link" href="https://ctftime.org/writeup/41137">View this writeup on CTFtime</a></p>
@@ -46,7 +48,7 @@
       </div>
     </section>
 
-    <section class="inner-section" aria-labelledby="first-look-title">
+    <section class="inner-section" id="overview" aria-labelledby="first-look-title">
       <h2 id="first-look-title">First look at the files</h2>
       <div class="section-content">
         <p>A quick hex view exposes recognizable format markers. The file sizes also help confirm which byte positions are being discussed.</p>
@@ -68,7 +70,7 @@ xxd -s -16 file2</code></pre>
       </div>
     </section>
 
-    <section class="inner-section" aria-labelledby="png-title">
+    <section class="inner-section" id="png" aria-labelledby="png-title">
       <h2 id="png-title">1. Restore the PNG</h2>
       <div class="section-content">
         <p>A PNG must begin with the eight-byte signature <code>89 50 4e 47 0d 0a 1a 0a</code>. The supplied file has the correct first byte and trailing four bytes, but the three ASCII bytes for <code>PNG</code> have been zeroed at offsets <code>0x01–0x03</code>.</p>
@@ -84,7 +86,7 @@ file file1.png</code></pre>
       </div>
     </section>
 
-    <section class="inner-section" aria-labelledby="jpeg-title">
+    <section class="inner-section" id="jpeg" aria-labelledby="jpeg-title">
       <h2 id="jpeg-title">2. Restore the JPEG</h2>
       <div class="section-content">
         <p>The string <code>JFIF</code> at offset <code>0x06</code> identifies the image as a JPEG. A common JFIF header begins <code>ff d8 ff e0</code>. In this file, the first three bytes are zero, while the existing <code>e0</code> and JFIF header remain intact.</p>
@@ -103,7 +105,7 @@ file file2.jpg</code></pre>
       </div>
     </section>
 
-    <section class="inner-section" aria-labelledby="mp4-title">
+    <section class="inner-section" id="mp4" aria-labelledby="mp4-title">
       <h2 id="mp4-title">3. Restore the MP4</h2>
       <div class="section-content">
         <p>ISO Base Media files are organized into boxes. The first four bytes here, <code>00 00 00 20</code>, declare a 32-byte box. The following four bytes are its type. They currently spell <code>pfyt</code>, but the image clue tells us to look for the File Type Box: <code>ftyp</code>.</p>
@@ -123,7 +125,7 @@ ffprobe -v error -show_entries format=duration,format_name \
       </div>
     </section>
 
-    <section class="inner-section" aria-labelledby="flag-title">
+    <section class="inner-section" id="flag" aria-labelledby="flag-title">
       <h2 id="flag-title">Flag and byte changes</h2>
       <div class="section-content">
         <p>Reading the visible fragments in order and joining them without adding or removing characters gives the flag:</p>
@@ -143,7 +145,7 @@ ffprobe -v error -show_entries format=duration,format_name \
       </div>
     </section>
 
-    <section class="inner-section" aria-labelledby="originals-title">
+    <section class="inner-section" id="originals" aria-labelledby="originals-title">
       <h2 id="originals-title">Original challenge files</h2>
       <div class="section-content">
         <p>These are the three files as they were provided in the challenge: unchanged, extensionless, and still corrupted. Use them with the repair commands or the Python solver below.</p>
@@ -155,7 +157,7 @@ ffprobe -v error -show_entries format=duration,format_name \
       </div>
     </section>
 
-    <section class="inner-section" aria-labelledby="reproduce-title">
+    <section class="inner-section" id="reproduce" aria-labelledby="reproduce-title">
       <h2 id="reproduce-title">Reproduce the repairs</h2>
       <div class="section-content">
         <p>The included Python script checks that each expected damaged byte sequence is present before writing a repaired copy. It leaves the original files untouched and uses only Python’s standard library.</p>
