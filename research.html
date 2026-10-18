@@ -1,28 +1,52 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#f4f2ea" />
-  <meta name="description" content="Daniel Peng's research notebook: security, graph analytics, threat intelligence, and data science." />
+  <meta name="description" content="Daniel Peng's research projects and notes in cybersecurity, graph analytics, threat intelligence, and data science." />
   <title>Research — Daniel Peng</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=20261017c" /><script src="script.js" defer></script>
+  <link rel="stylesheet" href="styles.css?v=20261017d" />
+  <script src="script.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header"><div class="header-inner wrap"><a class="brand" href="index.html" aria-label="Daniel Peng, home"><span class="brand-mark">dp<span class="brand-period">.</span></span><span class="brand-name">Daniel Peng</span></a><nav class="site-nav" aria-label="Main navigation"><a href="resume.html">Resume</a><a href="research.html" aria-current="page">Research</a><a href="index.html">Everything else</a></nav></div></header>
+  <header class="site-header"><div class="header-inner wrap">
+    <a class="brand" href="index.html" aria-label="Daniel Peng, home"><span class="brand-mark">dp<span class="brand-period">.</span></span><span class="brand-name">Daniel Peng</span></a>
+    <nav class="site-nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="resume.html">Resume</a><a href="research.html" aria-current="page">Research</a></nav>
+  </div></header>
   <main class="inner-main wrap" id="main">
-    <header class="inner-hero"><p class="section-index">RESEARCH / 01</p><div><h1>Following the<br /><em>interesting questions.</em></h1><p class="lead">This is a place for my experiments, research notes, and the questions I haven’t answered yet. I’ll add new work as it takes shape.</p></div></header>
-    <section class="inner-section"><h2>Current work</h2><div class="section-content"><ul class="entry-list">
-      <li><h3><a href="https://github.com/codewithdaniel1/lateral-movement-detection" target="_blank" rel="noopener noreferrer">Graph-based lateral movement detection ↗</a></h3><span class="entry-meta">SECURITY ANALYTICS</span><p>Can the paths between authentication events reveal unusual movement? This project explores graph-based detection using synthetic events.</p></li>
-      <li><h3><a href="https://github.com/codewithdaniel1/Explainable-AML-Transaction-Monitoring" target="_blank" rel="noopener noreferrer">Explainable transaction monitoring ↗</a></h3><span class="entry-meta">APPLIED MACHINE LEARNING</span><p>Comparing rules, anomaly signals, network context, and explainable models on synthetic transactions.</p></li>
-      <li><h3><a href="https://cyberactoratlas.pages.dev/" target="_blank" rel="noopener noreferrer">Cyber Actor Atlas ↗</a></h3><span class="entry-meta">OPEN DATA · THREAT INTELLIGENCE</span><p>Making publicly reported cyber actor information easier to explore through a map and downloadable dataset.</p></li>
-    </ul></div></section>
-    <section class="inner-section"><h2>At OSIRIS</h2><div class="section-content"><p>I’m part of the NYU <a class="inline-link" href="https://osiris.cyber.nyu.edu/" target="_blank" rel="noopener noreferrer">OSIRIS Research Lab</a> community. The lab brings together people working on offensive security, security education, and research.</p><p><a class="inline-link" href="https://osiris.cyber.nyu.edu/research/" target="_blank" rel="noopener noreferrer">Explore the lab’s research ↗</a></p></div></section>
-    <section class="inner-section"><h2>What’s next</h2><div class="section-content"><div class="paper-note"><h3>More to come</h3><p>When a project becomes a paper, poster, or useful note, I’ll add it here with the original source and enough context to make it approachable.</p></div></div></section>
-    <section class="inner-section"><h2>Threads I keep returning to</h2><div class="section-content"><div class="tag-list"><span>Threat intelligence</span><span>Authentication graphs</span><span>Lateral movement</span><span>Explainable ML</span><span>Security data</span><span>Tools people enjoy using</span></div></div></section>
+    <header class="inner-hero">
+      <h1>Research</h1>
+      <p class="lead">I explore how data and graph methods can help us understand security problems. Here are my current projects, my connection to OSIRIS, and a place for future papers and notes.</p>
+    </header>
+    <nav class="page-nav" aria-label="Research sections"><span>Jump to</span><a href="#projects">Current projects ↓</a><a href="#osiris">OSIRIS ↓</a><a href="#publications">Publications ↓</a><a href="#interests">Interests ↓</a></nav>
+
+    <section class="inner-section" id="projects" aria-labelledby="projects-title">
+      <h2 id="projects-title">Current projects</h2>
+      <div class="section-content"><ul class="entry-list">
+        <li><h3>Graph-based lateral movement detection</h3><span class="entry-meta">Security analytics</span><p>Exploring whether paths between authentication events can reveal unusual movement, using synthetic event data.</p><a class="under-link" href="https://github.com/codewithdaniel1/lateral-movement-detection" aria-label="View lateral movement detection repository">View repository ↗</a></li>
+        <li><h3>Explainable transaction monitoring</h3><span class="entry-meta">Applied machine learning</span><p>Comparing rules, anomaly signals, network context, and explainable models on synthetic transactions.</p><a class="under-link" href="https://github.com/codewithdaniel1/Explainable-AML-Transaction-Monitoring" aria-label="View explainable transaction monitoring repository">View repository ↗</a></li>
+        <li><h3>Cyber Actor Atlas</h3><span class="entry-meta">Threat intelligence · Open data</span><p>Making publicly reported cyber actor information easier to explore through a map and downloadable dataset.</p><a class="under-link" href="https://cyberactoratlas.pages.dev/">Visit Cyber Actor Atlas ↗</a></li>
+      </ul></div>
+    </section>
+    <section class="inner-section" id="osiris" aria-labelledby="osiris-title">
+      <h2 id="osiris-title">OSIRIS Research Lab</h2>
+      <div class="section-content"><p>I’m part of the OSIRIS Research Lab community at NYU. The lab brings together people working on offensive security, security education, and research.</p><div class="page-actions"><a class="under-link" href="https://osiris.cyber.nyu.edu/research/">The lab’s research ↗</a><a class="under-link" href="index.html#ctf">My CTF team & writeups →</a></div></div>
+    </section>
+    <section class="inner-section" id="publications" aria-labelledby="publications-title">
+      <h2 id="publications-title">Publications & notes</h2>
+      <div class="section-content"><p>No publications listed yet. I’ll add papers, posters, and research notes here as they’re ready, with links to the original work.</p></div>
+    </section>
+    <section class="inner-section" id="interests" aria-labelledby="interests-title">
+      <h2 id="interests-title">Research interests</h2>
+      <div class="section-content"><div class="tag-list"><span>Threat intelligence</span><span>Authentication graphs</span><span>Lateral movement</span><span>Explainable ML</span><span>Security data</span></div></div>
+    </section>
+    <p class="section-followup">Interested in a project? <a class="inline-link" href="mailto:danielpeng@osiris.cyber.nyu.edu">Email me →</a></p>
   </main>
-  <footer class="site-footer"><div class="wrap footer-inner"><a class="brand" href="index.html"><span class="brand-mark">dp<span class="brand-period">.</span></span><span class="brand-name">Daniel Peng</span></a><span>Made with care in New York · © <span data-year>2026</span></span><a href="index.html">Home ↗</a></div></footer>
+  <footer class="site-footer"><div class="wrap footer-inner"><span>© <span data-year>2026</span> Daniel Peng · New York</span><a href="#main">Back to top ↑</a></div></footer>
 </body>
 </html>
