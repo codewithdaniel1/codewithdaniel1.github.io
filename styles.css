@@ -86,8 +86,8 @@ h1, h2, h3, h4 { text-wrap: balance; }
 .paper-note h3, .paper-note h4 { margin: 0 0 10px; font: 600 25px/1.2 var(--serif); }
 .paper-note p { margin: 0; }
 .writeup-card { border-left-color: var(--clay); }
-.writeup-card h4 a { text-decoration: underline; text-decoration-color: var(--rule); text-underline-offset: 4px; }
-.writeup-card h4 a:hover { color: var(--moss); text-decoration-color: var(--moss); }
+.writeup-card h3 a, .writeup-card h4 a { text-decoration: underline; text-decoration-color: var(--rule); text-underline-offset: 4px; }
+.writeup-card h3 a:hover, .writeup-card h4 a:hover { color: var(--moss); text-decoration-color: var(--moss); }
 .writeup-card .writeup-kicker { margin: 0 0 8px; color: var(--moss); font-size: 11px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; }
 .writeup-card .under-link { margin-top: 13px; }
 .about-section { display: grid; grid-template-columns: 220px minmax(0,1fr); gap: 48px; }
