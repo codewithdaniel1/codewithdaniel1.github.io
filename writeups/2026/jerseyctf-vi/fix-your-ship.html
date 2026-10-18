@@ -38,7 +38,7 @@
     <section class="inner-section" aria-labelledby="challenge-title">
       <h2 id="challenge-title">The challenge</h2>
       <div class="section-content">
-        <p>JerseyCTF VI ran from April 18 at 19:00 UTC to April 19 at 19:00 UTC. <a class="inline-link" href="https://ctftime.org/event/3117">See the event on CTFtime ↗</a></p>
+        <p>JerseyCTF VI ran from April 18 at 19:00 UTC to April 19 at 19:00 UTC. <a class="inline-link" href="https://ctftime.org/event/3117">See the event on CTFtime ↗</a> · <a class="inline-link" href="https://ctftime.org/writeup/41137">View this writeup on CTFtime ↗</a></p>
         <p>The prompt describes a crashed ship and three corrupted schematic files. It gives one important starting point: <code>file1</code> is a PNG. Once recovered, that image should tell us how to open the other files.</p>
         <p>The downloads have no useful extensions. The goal is to identify their formats from their bytes, repair the damaged parts, and follow the clues in each recovered artifact.</p>
         <div class="writeup-callout"><p><strong>Approach:</strong> inspect the headers and endings first, change only bytes that the format and clues justify, then verify each repaired artifact before moving on.</p></div>
