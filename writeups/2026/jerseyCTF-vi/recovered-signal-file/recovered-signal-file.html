@@ -9,7 +9,7 @@
   <meta property="og:description" content="A two-step decoding walkthrough for a satellite signal hidden in signal.log." />
   <meta property="og:type" content="article" />
   <title>Recovered Signal File | JerseyCTF VI Writeup | Daniel Peng</title>
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -38,12 +38,10 @@
     <section class="inner-section" id="challenge" aria-labelledby="challenge-title">
       <h2 id="challenge-title">The challenge</h2>
       <div class="section-content">
-        <p>The supplied <code>signal.log</code> contains a single encoded transmission. Its character set and length make Base64 a useful first check. Decoding it reveals another layer rather than readable text.</p>
-        <pre><code>aW9kant2ZHdob29sd2hfdmxqcWRvX2doZnJnaGd9</code></pre>
+        <p>This signal was recovered from a Cold War-era satellite. The encryption doesn't appear very advanced, but it was enough to avoid detection at the time. With the right approach, the message should be recoverable.</p>
+        <p>Flag format for this challenge is <code>flag{}</code>.</p>
         <div class="writeup-downloads">
           <a class="under-link" href="assets/original/signal.log" download>Original challenge file · signal.log</a>
-          <a class="under-link" href="assets/recovered/signal-base64-decoded.txt" download>Recovered intermediate text</a>
-          <a class="under-link" href="assets/recovered/signal-flag.txt" download>Recovered flag file</a>
         </div>
       </div>
     </section>
@@ -57,6 +55,10 @@
         <p>The result still looks transformed. Shifting each letter backward by three positions gives a readable flag. The substitution wraps around the alphabet, so <code>d</code> becomes <code>a</code>; punctuation and underscores remain unchanged.</p>
         <pre><code>echo 'iodj{vdwhoolwh_vljqdo_ghfrghg}' | tr 'A-Za-z' 'X-ZA-Wx-za-w'</code></pre>
         <pre><code>flag{satellite_signal_decoded}</code></pre>
+        <div class="writeup-downloads">
+          <a class="under-link" href="assets/recovered/signal-base64-decoded.txt" download>Recovered intermediate text</a>
+          <a class="under-link" href="assets/recovered/signal-flag.txt" download>Recovered flag file</a>
+        </div>
       </div>
     </section>
 

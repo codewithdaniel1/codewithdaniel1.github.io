@@ -9,7 +9,7 @@
   <meta property="og:description" content="Recover a reused RSA prime from a diagnostic value, reconstruct the private exponent, and decrypt the message." />
   <meta property="og:type" content="article" />
   <title>Relay Artifact TX-7 | JerseyCTF VI Writeup | Daniel Peng</title>
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -38,11 +38,9 @@
     <section class="inner-section" id="challenge" aria-labelledby="challenge-title">
       <h2 id="challenge-title">The challenge</h2>
       <div class="section-content">
-        <p>The archive contains an RSA public key, a ciphertext, and a diagnostic integer. The diagnostic value was generated in a way that shares a prime factor with the RSA modulus. That makes the modulus factorable with a greatest common divisor instead of a general-purpose factoring attack.</p>
-        <p>The ciphertext is 384 bytes. The key weakness is not the ciphertext length or a guessable message; it is the reuse of one of the modulus primes in another published value.</p>
+        <p>Relay node TX-7 was recovered from a decommissioned corridor between the outer and inner system. Diagnostics show it prepared a final transmission but never sent it - the relay restrained itself. Reconstruct what TX-7 was trying to say; its last unsent message may point toward the only viable route inward.</p>
         <div class="writeup-downloads">
-          <a class="under-link" href="assets/recovered/relay-artifact-tx-7-transmission.txt" download>Recovered relay transmission</a>
-          <a class="under-link" href="assets/recovered/relay-artifact-tx-7-flag.txt" download>Recovered flag file</a>
+          <a class="under-link" href="assets/original/03-relay-artifact-tx-7.zip" download>Original challenge archive</a>
         </div>
       </div>
     </section>
@@ -66,15 +64,17 @@ d = pow(e, -1, phi)</code></pre>
     <section class="inner-section" id="decrypt" aria-labelledby="decrypt-title">
       <h2 id="decrypt-title">Decrypt the relay</h2>
       <div class="section-content">
-        <p>Convert the ciphertext bytes to an integer, apply RSA decryption, then convert the result back to bytes. The modulus size determines the fixed-width plaintext block:</p>
+        <p>Convert the ciphertext bytes to an integer, apply RSA decryption, then convert the result back to bytes. The modulus size determines the fixed-width block. It begins with PKCS#1 v1.5 encryption padding (<code>00 02</code>), so read the message after the next zero-byte separator:</p>
         <pre><code>ciphertext_int = int.from_bytes(ciphertext, "big")
 message_int = pow(ciphertext_int, d, n)
 block_size = (n.bit_length() + 7) // 8
-plaintext = message_int.to_bytes(block_size, "big").lstrip(b"\x00")
+block = message_int.to_bytes(block_size, "big")
+assert block.startswith(b"\x00\x02")
+plaintext = block[2:].split(b"\x00", 1)[1]
 print(plaintext.decode())</code></pre>
         <p>The plaintext reads:</p>
         <div class="writeup-callout">
-          <p><strong>Relay Transmission: UNSENT</strong></p>
+          <p><strong>Relay Transmission — UNSENT</strong></p>
           <p>The restraint was not ordered.<br />It was negotiated.</p>
           <p>Direct control provokes resistance.<br />Indirect action is tolerated.</p>
           <p>Partial restoration maintained system stability.</p>
@@ -82,6 +82,10 @@ print(plaintext.decode())</code></pre>
         </div>
         <p>The message ends with the flag:</p>
         <pre class="writeup-flag"><code>JCTF{INDIRECT_CONTROL_IS_THE_ONLY_CONTROL}</code></pre>
+        <div class="writeup-downloads">
+          <a class="under-link" href="assets/recovered/relay-artifact-tx-7-transmission.txt" download>Recovered relay transmission</a>
+          <a class="under-link" href="assets/recovered/relay-artifact-tx-7-flag.txt" download>Recovered flag file</a>
+        </div>
       </div>
     </section>
 

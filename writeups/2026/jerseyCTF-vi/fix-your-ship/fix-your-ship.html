@@ -9,7 +9,7 @@
   <meta property="og:description" content="A file-forensics walkthrough with exact byte repairs, recovered evidence, and a reproducible Python solver." />
   <meta property="og:type" content="article" />
   <title>Fix Your Ship | JerseyCTF VI Writeup | Daniel Peng</title>
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -39,10 +39,13 @@
     <section class="inner-section" id="challenge" aria-labelledby="challenge-title">
       <h2 id="challenge-title">The challenge</h2>
       <div class="section-content">
-        <p>JerseyCTF VI ran from April 18 at 19:00 UTC to April 19 at 19:00 UTC. <a class="inline-link" href="https://ctftime.org/event/3117">See the event on CTFtime</a> · <a class="inline-link" href="https://ctftime.org/writeup/41137">View this writeup on CTFtime</a></p>
-        <p>The prompt describes a crashed ship and three corrupted schematic files. It gives one important starting point: <code>file1</code> is a PNG. Once recovered, that image should tell us how to open the other files.</p>
-        <p>The downloads have no useful extensions. The goal is to identify their formats from their bytes, repair the damaged parts, and follow the clues in each recovered artifact.</p>
-        <div class="writeup-callout"><p><strong>Approach:</strong> inspect the headers and endings first, change only bytes that the format and clues justify, then verify each repaired artifact before moving on.</p></div>
+        <p>Our spaceship has crash-landed, and we need to repair its engine. Unfortunately, the files containing the ship's schematics have been corrupted.</p>
+        <p>It supplies three files with altered hexadecimal bytes. The first is meant to be a PNG, and its contents provide clues for repairing the other two.</p>
+        <div class="writeup-downloads">
+          <a class="under-link" href="assets/original/file1" download>Original challenge file · file1</a>
+          <a class="under-link" href="assets/original/file2" download>Original challenge file · file2</a>
+          <a class="under-link" href="assets/original/file3" download>Original challenge file · file3</a>
+        </div>
       </div>
     </section>
 
@@ -77,7 +80,7 @@ printf 'PNG' | dd of=file1.png bs=1 seek=1 conv=notrunc status=none
 file file1.png</code></pre>
         <p>After replacing just those three bytes, the image opens. Its ship schematic contains the first flag segment and a clue for repairing the next file.</p>
         <figure class="writeup-figure">
-          <img src="assets/fix-your-ship-schematic.png" alt="Recovered spacecraft schematic with the first flag segment and a note that the next file starts with FF and ends with D9." loading="lazy" />
+          <img src="assets/recovered/fix-your-ship-schematic.png" alt="Recovered spacecraft schematic with the first flag segment and a note that the next file starts with FF and ends with D9." loading="lazy" />
           <figcaption>Recovered <code>file1.png</code>. The note “first hex digit” refers to the first byte: the JPEG begins with <code>ff</code> and ends with <code>d9</code>.</figcaption>
         </figure>
         <div class="writeup-callout"><p><strong>Recovered:</strong> <code>jctf{starship</code></p><p><strong>Next clue:</strong> the second file starts with byte <code>ff</code> and ends with byte <code>d9</code>.</p></div>
@@ -96,7 +99,7 @@ printf '\377\331' | dd of=file2.jpg bs=1 \
 file file2.jpg</code></pre>
         <p>The repaired JPEG reveals another schematic. The text <code>_voyager_</code> supplies the next flag segment. The heading “FILE TYPE BOX” is also the hint needed for the last file.</p>
         <figure class="writeup-figure">
-          <img src="assets/fix-your-ship-engine.jpg" alt="Recovered engine schematic labeled FILE TYPE BOX, with notes about the ship's engine and the flag segment voyager." loading="lazy" />
+          <img src="assets/recovered/fix-your-ship-engine.jpg" alt="Recovered engine schematic labeled FILE TYPE BOX, with notes about the ship's engine and the flag segment voyager." loading="lazy" />
           <figcaption>Recovered <code>file2.jpg</code>. “FILE TYPE BOX” points to the MP4 <code>ftyp</code> box; the marked engine walkthrough is part of the challenge’s visual clue.</figcaption>
         </figure>
         <div class="writeup-callout"><p><strong>Recovered:</strong> <code>_voyager_</code></p><p><strong>Next clue:</strong> inspect the MP4 File Type Box, whose box type should be <code>ftyp</code>.</p></div>
@@ -115,8 +118,8 @@ ffprobe -v error -show_entries format=duration,format_name \
   -of default=noprint_wrappers=1 file3.mp4</code></pre>
         <p>The repaired video is about 4.2 seconds long. A frame from around one second in shows the final flag fragment, <code>apollo}</code>.</p>
         <video class="writeup-video" controls playsinline preload="metadata" aria-label="Recovered four-second Fix Your Ship challenge video">
-          <source src="assets/fix-your-ship-recovered.mp4" type="video/mp4" />
-          Your browser does not support embedded MP4 video. <a href="assets/fix-your-ship-recovered.mp4">Download the recovered clip</a>.
+          <source src="assets/recovered/fix-your-ship-recovered.mp4" type="video/mp4" />
+          Your browser does not support embedded MP4 video. <a href="assets/recovered/fix-your-ship-recovered.mp4">Download the recovered clip</a>.
         </video>
         <p class="quiet-note">Recovered challenge video, playable in the page or available to download.</p>
         <div class="writeup-callout"><p><strong>Recovered:</strong> <code>apollo}</code></p></div>
@@ -143,18 +146,6 @@ ffprobe -v error -show_entries format=duration,format_name \
       </div>
     </section>
 
-    <section class="inner-section" id="originals" aria-labelledby="originals-title">
-      <h2 id="originals-title">Original challenge files</h2>
-      <div class="section-content">
-        <p>These are the three files as they were provided in the challenge: unchanged, extensionless, and still corrupted. Use them with the repair commands or the Python solver below.</p>
-        <div class="writeup-downloads">
-          <a class="under-link" href="assets/original/file1" download>Original file1 · damaged PNG</a>
-          <a class="under-link" href="assets/original/file2" download>Original file2 · damaged JPEG</a>
-          <a class="under-link" href="assets/original/file3" download>Original file3 · damaged MP4</a>
-        </div>
-      </div>
-    </section>
-
     <section class="inner-section" id="reproduce" aria-labelledby="reproduce-title">
       <h2 id="reproduce-title">Reproduce the repairs</h2>
       <div class="section-content">
@@ -162,9 +153,9 @@ ffprobe -v error -show_entries format=duration,format_name \
         <pre><code>python3 solve_fix_your_ship.py assets/original/file1 assets/original/file2 assets/original/file3 --out repaired</code></pre>
         <div class="writeup-downloads">
           <a class="under-link" href="solve_fix_your_ship.py" download>Download Python repair script</a>
-          <a class="under-link" href="assets/fix-your-ship-schematic.png" download>Recovered PNG</a>
-          <a class="under-link" href="assets/fix-your-ship-engine.jpg" download>Recovered JPEG</a>
-          <a class="under-link" href="assets/fix-your-ship-recovered.mp4" download>Recovered MP4</a>
+          <a class="under-link" href="assets/recovered/fix-your-ship-schematic.png" download>Recovered PNG</a>
+          <a class="under-link" href="assets/recovered/fix-your-ship-engine.jpg" download>Recovered JPEG</a>
+          <a class="under-link" href="assets/recovered/fix-your-ship-recovered.mp4" download>Recovered MP4</a>
         </div>
         <div class="writeup-callout"><p><strong>Verification note:</strong> the flag is reconstructed from the supplied challenge artifacts and the repaired media was inspected locally. I have not independently confirmed an online scoreboard submission.</p></div>
         <p>The useful lesson is simple: corruption does not always mean the whole file is lost. A few format-specific bytes can be enough to make the original content readable again. Start with what the file says about itself, follow evidence between artifacts, and keep repairs as small and verifiable as possible.</p>

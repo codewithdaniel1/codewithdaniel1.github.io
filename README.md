@@ -15,8 +15,9 @@ The main navigation has four pages: **Home**, **Project**, **Research**, and **C
 - `writeups/2026/jerseyCTF-vi/recovered-signal-file/recovered-signal-file.html` - JerseyCTF VI Base64 and Caesar-shift decoding walkthrough.
 - `writeups/2026/jerseyCTF-vi/qastah-nuq/qastah-nuq.html` - JerseyCTF VI PCAP and HTTP payload analysis walkthrough.
 - `writeups/2026/jerseyCTF-vi/relay-artifact-tx-7/relay-artifact-tx-7.html` - JerseyCTF VI RSA prime-reuse cryptography walkthrough.
-- `writeups/2026/bsidesnyc-ctf/classified/classified.html` - BSidesNYC CTF “Classified” walkthrough (October 17, 2026), tracing a hex-encoded document path to a hidden flag.
-- `portrait-daniel.png` - Daniel's portrait, sourced from his LinkedIn profile with his permission for this site.
+- `writeups/2026/bsidesnyc-ctf/classified/classified.html` - BSidesNYC CTF “Classified” walkthrough (October 17, 2026), tracing a hex-encoded document path to a hidden flag, with an offline CipherWiki archive.
+- `assets/favicon.svg` - the site's browser icon.
+- `assets/portrait-daniel.png` - Daniel's portrait, sourced from his LinkedIn profile with his permission for this site.
 - `styles.css` - the site's warm, nature-inspired visual system.
 
 ## Add future work
@@ -31,10 +32,12 @@ Add a research topic card in `research.html`. Include the question, method/statu
 
 ### CTF writeups
 
-1. Create `writeups/<year>/<event-slug>/` and copy `CTF_WRITEUP_TEMPLATE.html` there as `<challenge-slug>.html`.
-2. Replace the bracketed placeholders and use the template’s `../../../../styles.css` and `../../../../ctf.html` links for site navigation. Keep each challenge page and its `assets/` directory together in a challenge folder. Do not add a “Jump to” bar or solve counts.
+1. Create `writeups/<year>/<event-slug>/<challenge-slug>/` and copy `CTF_WRITEUP_TEMPLATE.html` there as `<challenge-slug>.html`.
+2. Replace the bracketed placeholders and use the template’s `../../../../styles.css` and `../../../../ctf.html` links for site navigation. Keep each challenge page and its `assets/` directory together in a challenge folder. Keep the “The challenge” section close to the original CTFd prompt and link every available original challenge file there. Put unchanged inputs in `assets/original/` and repaired, decoded, or otherwise recovered outputs in `assets/recovered/`; create either folder only when it contains files. Do not add a “Jump to” bar or solve counts.
 3. Add the new article to the Writeups section of `ctf.html`. Include the event, challenge name, category, and a short summary.
 4. Publish only after the event rules allow it.
+
+When a challenge depends on a temporary website, preserve its pages and required assets under `assets/original/<site-name>/`. Link to the local entry page in “The challenge” and keep the original URL as a source reference. Use relative links within the snapshot, cache required fonts/media, and preserve hidden clue text. Document capture dates and any link changes; retain unchanged HTML/CSS source separately when localization changes those files. The Classified archive records these details in its `assets/README.md` and source manifest.
 
 Example structure:
 
@@ -45,22 +48,30 @@ writeups/
     │   └── classified/
     │       ├── classified.html
     │       └── assets/
+    │           ├── original/
+    │           └── recovered/
     └── jerseyCTF-vi/
         ├── fix-your-ship/
         │   ├── fix-your-ship.html
         │   ├── solve_fix_your_ship.py
         │   └── assets/
         │       ├── original/
-        │       └── recovered media
+        │       └── recovered/
         ├── recovered-signal-file/
         │   ├── recovered-signal-file.html
         │   └── assets/
+        │       ├── original/
+        │       └── recovered/
         ├── qastah-nuq/
         │   ├── qastah-nuq.html
         │   └── assets/
+        │       ├── original/
+        │       └── recovered/
         └── relay-artifact-tx-7/
             ├── relay-artifact-tx-7.html
             └── assets/
+                ├── original/
+                └── recovered/
 ```
 
 The CTFtime team profile is the source for current team standings and event results.

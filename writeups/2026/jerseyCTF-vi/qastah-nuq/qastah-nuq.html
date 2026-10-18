@@ -9,7 +9,7 @@
   <meta property="og:description" content="Inspect a network capture, locate an HTTP response, and decode its Base64 payload." />
   <meta property="og:type" content="article" />
   <title>qaStaH nuq | JerseyCTF VI Writeup | Daniel Peng</title>
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -38,12 +38,9 @@
     <section class="inner-section" id="challenge" aria-labelledby="challenge-title">
       <h2 id="challenge-title">The challenge</h2>
       <div class="section-content">
-        <p>The provided PCAP contains 366 packets across TCP, UDP, and ICMP. Most of the capture is unrelated traffic. The useful evidence is an HTTP request for <code>/plans.html</code> and the response that follows it.</p>
-        <p>In Wireshark, a display filter narrows the capture to the request:</p>
-        <pre><code>http.request.uri == "/plans.html"</code></pre>
+        <p>The USS Enterprise is conducting an intelligence gathering mission near the neutral zone. During the mission, Spock intercepted some network traffic and handed you the resulting PCAP file for analysis. Upon preliminary examination Spock believes the Klingon Empire may be concealing encoded messages within otherwise routine network traffic. Your task is to analyze and uncover any hidden transmissions.</p>
         <div class="writeup-downloads">
-          <a class="under-link" href="assets/recovered/qaStaH-http-response.txt" download>Recovered HTTP response</a>
-          <a class="under-link" href="assets/recovered/qaStaH-flag.txt" download>Recovered flag file</a>
+          <a class="under-link" href="assets/original/qaStaH_nuq.pcap" download>Original challenge PCAP</a>
         </div>
       </div>
     </section>
@@ -64,6 +61,10 @@ amN0ZntBdHRhY2tfVGhlX0VudGVycHJpc2V9</code></pre>
         <p>After extracting the body, decode it with:</p>
         <pre><code>echo 'amN0ZntBdHRhY2tfVGhlX0VudGVycHJpc2V9' | base64 -d</code></pre>
         <pre><code>jctf{Attack_The_Enterprise}</code></pre>
+        <div class="writeup-downloads">
+          <a class="under-link" href="assets/recovered/qaStaH-http-response.txt" download>Recovered HTTP response</a>
+          <a class="under-link" href="assets/recovered/qaStaH-flag.txt" download>Recovered flag file</a>
+        </div>
       </div>
     </section>
 
