@@ -13,19 +13,19 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../../../styles.css?v=jerseyctf-writeups" />
-  <script src="../../../script.js" defer></script>
+  <link rel="stylesheet" href="../../../../styles.css?v=jerseyctf-writeups" />
+  <script src="../../../../script.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="header-inner wrap">
-      <a class="brand" href="../../../index.html" aria-label="Daniel Peng, home"><span class="brand-mark">dp<span class="brand-period">.</span></span><span class="brand-name">Daniel Peng</span></a>
-      <nav class="site-nav" aria-label="Main navigation"><a href="../../../index.html">Home</a><a href="../../../project.html">Project</a><a href="../../../research.html">Research</a><a href="../../../ctf.html">CTF</a></nav>
+      <a class="brand" href="../../../../index.html" aria-label="Daniel Peng, home"><span class="brand-mark">dp<span class="brand-period">.</span></span><span class="brand-name">Daniel Peng</span></a>
+      <nav class="site-nav" aria-label="Main navigation"><a href="../../../../index.html">Home</a><a href="../../../../project.html">Project</a><a href="../../../../research.html">Research</a><a href="../../../../ctf.html">CTF</a></nav>
     </div>
   </header>
   <main class="inner-main wrap prose" id="main">
-    <a class="back-link" href="../../../ctf.html">All CTF writeups</a>
+    <a class="back-link" href="../../../../ctf.html">All CTF writeups</a>
     <header class="inner-hero">
       <p class="section-index">CTF WRITEUP / JERSEYCTF VI</p>
       <div>
@@ -41,6 +41,10 @@
         <p>The provided PCAP contains 366 packets across TCP, UDP, and ICMP. Most of the capture is unrelated traffic. The useful evidence is an HTTP request for <code>/plans.html</code> and the response that follows it.</p>
         <p>In Wireshark, a display filter narrows the capture to the request:</p>
         <pre><code>http.request.uri == "/plans.html"</code></pre>
+        <div class="writeup-downloads">
+          <a class="under-link" href="assets/recovered/qaStaH-http-response.txt" download>Recovered HTTP response</a>
+          <a class="under-link" href="assets/recovered/qaStaH-flag.txt" download>Recovered flag file</a>
+        </div>
       </div>
     </section>
 
@@ -71,6 +75,6 @@ amN0ZntBdHRhY2tfVGhlX0VudGVycHJpc2V9</code></pre>
       </div>
     </section>
   </main>
-  <footer class="site-footer"><div class="wrap footer-inner"><span>Daniel Peng · New York</span><a href="../../../ctf.html">All CTF writeups</a></div></footer>
+  <footer class="site-footer"><div class="wrap footer-inner"><span>Daniel Peng · New York</span><a href="../../../../ctf.html">All CTF writeups</a></div></footer>
 </body>
 </html>
