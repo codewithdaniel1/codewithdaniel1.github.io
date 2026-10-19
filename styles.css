@@ -146,6 +146,8 @@ h1, h2, h3, h4 { text-wrap: balance; }
 .experience-role-title { display: block; color: var(--ink-soft); font-size: 17px; line-height: 1.45; }
 .experience-role-title::before { content: "— "; color: var(--clay); }
 .entry-list .experience-keywords { margin: 3px 0 0 20px; color: var(--moss); font-size: 14px; line-height: 1.6; }
+.entry-list .experience-tools { margin: 3px 0 0 20px; color: var(--ink-soft); font-size: 13px; line-height: 1.6; }
+.experience-tools strong { color: var(--ink); font-weight: 600; }
 .entry-list .under-link { grid-column: 1 / -1; justify-self: start; min-height: 32px; }
 .tag-list { display: flex; flex-wrap: wrap; gap: 8px; }
 .tag-list span { padding: 6px 10px; border: 1px solid var(--rule); color: var(--ink-soft); font-size: 13px; }
@@ -261,6 +263,7 @@ h1, h2, h3, h4 { text-wrap: balance; }
   .experience-roles { gap:5px; }
   .experience-role-title { font-size:10pt; }
   .entry-list .experience-keywords { font-size:8pt; }
+  .entry-list .experience-tools { font-size:8pt; }
   .entry-meta { font-size:7pt; }
   .tag-list span { padding:4px 6px; font-size:7pt; }
 }
