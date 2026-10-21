@@ -30,6 +30,8 @@ Add a project showcase to `project.html`. Link directly to the source, package p
 
 Add a research topic card in `research.html`. Include the question, method/status, and a link to the paper, poster, repository, or project page. Keep lab-wide work clearly attributed to the lab.
 
+External website links should use `target="_blank" rel="noopener noreferrer"`. Keep links within this site in the current tab.
+
 ### CTF writeups
 
 1. Create `writeups/<year>/<event-slug>/<challenge-slug>/` and copy `CTF_WRITEUP_TEMPLATE.html` there as `<challenge-slug>.html`.
