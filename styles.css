@@ -104,6 +104,7 @@ h1, h2, h3, h4 { text-wrap: balance; }
 .ctf-event-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 14px; margin-bottom: 18px; }
 .ctf-event-header h3 { margin: 0; font: 600 29px/1.1 var(--serif); }
 .ctf-event-placement { margin: 8px 0 0; color: var(--moss); font-size: 13px; font-weight: 600; }
+.ctf-event-context { margin: 4px 0 0; color: var(--ink-soft); font-size: 12px; }
 .ctf-event-header .writeup-kicker { margin: 0 0 6px; color: var(--moss); font-size: 11px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; }
 .ctf-event-date { color: var(--ink-soft); font-size: 12px; text-align: right; }
 .ctf-challenge { display: grid; grid-template-columns: minmax(0,1fr) auto; align-items: center; gap: 8px 14px; padding-block: 14px; border-top: 1px solid var(--rule); }
