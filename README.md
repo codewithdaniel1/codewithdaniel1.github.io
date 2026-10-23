@@ -2,15 +2,16 @@
 
 A personal website for Daniel Peng’s resume, projects, research, open-source contributions, and CTF writeups. It is a lightweight static site built with HTML, CSS, and JavaScript.
 
-The main navigation has four pages: **Home**, **Project**, **Research**, and **CTF**. Home brings together the introduction and professional experience; Project contains selected work and open-source contributions.
+The main navigation has four pages: **Home**, **Project**, **Research**, and **CTF & Competition**. Home brings together the introduction and professional experience; Project contains selected work and open-source contributions.
 
 ## Site map
 
 - `index.html` - **Home**: introduction, experience, education, awards, technical toolkit, and professional profile links.
 - `project.html` - **Project**: selected projects and open-source contributions.
 - `research.html` - research focus areas and future research updates.
-- `ctf.html` - NYUSEC CTF results and challenge writeups.
-- `CTF_WRITEUP_TEMPLATE.html` - starting point for a new writeup.
+- `ctf.html` - NYUSEC team overview and competition cards.
+- `competitions/` - individual competition pages, CTF writeup lists, and the ISACA case study.
+- `templates/CTF_WRITEUP_TEMPLATE.html` - starting point for a new writeup.
 - `writeups/2026/jerseyCTF-vi/fix-your-ship/fix-your-ship.html` - JerseyCTF VI “Fix Your Ship” forensics walkthrough (April 18-19, 2026), with the original challenge files, recovered artifacts, and a Python repair script.
 - `writeups/2026/jerseyCTF-vi/recovered-signal-file/recovered-signal-file.html` - JerseyCTF VI Base64 and Caesar-shift decoding walkthrough.
 - `writeups/2026/jerseyCTF-vi/qastah-nuq/qastah-nuq.html` - JerseyCTF VI PCAP and HTTP payload analysis walkthrough.
@@ -30,13 +31,13 @@ Add a project showcase to `project.html`. Link directly to the source, package p
 
 Add a research topic card in `research.html`. Include the question, method/status, and a link to the paper, poster, repository, or project page. Keep lab-wide work clearly attributed to the lab.
 
-External website links should use `target="_blank" rel="noopener noreferrer"`. Keep links within this site in the current tab.
+External website links should use `target="_blank" rel="noopener noreferrer"`. Keep links within this site in the current tab by default. In BSidesNYC writeups, links open in a new tab except the back links to the competition’s writeup list.
 
 ### CTF writeups
 
-1. Create `writeups/<year>/<event-slug>/<challenge-slug>/` and copy `CTF_WRITEUP_TEMPLATE.html` there as `<challenge-slug>.html`.
-2. Replace the bracketed placeholders and use the template’s `../../../../styles.css` and `../../../../ctf.html` links for site navigation. Keep each challenge page and its `assets/` directory together in a challenge folder. Keep the “The challenge” section close to the original CTFd prompt and link every available original challenge file there. Put unchanged inputs in `assets/original/` and repaired, decoded, or otherwise recovered outputs in `assets/recovered/`; create either folder only when it contains files. Do not add a “Jump to” bar or solve counts.
-3. Add the new article to the Writeups section of `ctf.html`. Include the event, challenge name, category, and a short summary.
+1. Create `writeups/<year>/<event-slug>/<challenge-slug>/` and copy `templates/CTF_WRITEUP_TEMPLATE.html` there as `<challenge-slug>.html`.
+2. Replace the bracketed placeholders, including `[COMPETITION-PAGE]` in both back links: use `bsidesnyc` or `jerseyctf-vi` for the existing CTF pages. The back links point to `../../../../competitions/<competition-page>.html#writeups` and retain `data-back-to-ctf` to restore the previous position when returning from that list. Keep the template’s four-level relative paths after copying it; they are intended for the challenge folder, not for previewing the template in place. Keep each challenge page and its `assets/` directory together in a challenge folder. Keep the “The challenge” section close to the original CTFd prompt and link every available original challenge file there. Put unchanged inputs in `assets/original/` and repaired, decoded, or otherwise recovered outputs in `assets/recovered/`; create either folder only when it contains files. Do not add a “Jump to” bar or solve counts.
+3. Add the new article to the Writeups section of its page in `competitions/`. Include the challenge name, category, and a short summary. For a new competition, create its page and add a linked card to `ctf.html`.
 4. Publish only after the event rules allow it.
 
 When a challenge depends on a temporary website, preserve its pages and required assets under `assets/original/<site-name>/`. Link to the local entry page in “The challenge” and keep the original URL as a source reference. Use relative links within the snapshot, cache required fonts/media, and preserve hidden clue text. Document capture dates and any link changes; retain unchanged HTML/CSS source separately when localization changes those files. The Classified archive records these details in its `assets/README.md` and source manifest.
