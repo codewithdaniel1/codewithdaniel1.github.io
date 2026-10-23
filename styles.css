@@ -161,6 +161,16 @@ h1, h2, h3, h4 { text-wrap: balance; }
 .entry-list .experience-tools { margin: 3px 0 0 20px; color: var(--ink-soft); font-size: 13px; line-height: 1.6; }
 .experience-tools strong { color: var(--ink); font-weight: 600; }
 .entry-list .under-link { grid-column: 1 / -1; justify-self: start; min-height: 32px; }
+.badges-intro { margin: 0 0 20px; font-size: 14px; }
+.badge-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 12px; margin: 0; padding: 0; list-style: none; }
+.badge-card { display: flex; align-items: center; gap: 14px; min-height: 114px; height: 100%; padding: 14px; border: 1px solid var(--rule); background: var(--paper-light); }
+.badge-card:hover { border-color: var(--moss); background: var(--stone); }
+.badge-card img { flex: none; width: 72px; height: 72px; object-fit: contain; }
+.badge-card-copy { display: flex; flex: 1; flex-direction: column; gap: 5px; min-width: 0; }
+.badge-card-copy strong { color: var(--ink); font-size: 14px; font-weight: 600; line-height: 1.35; }
+.badge-card-copy > span { color: var(--ink-soft); font-size: 12px; }
+.badge-card-arrow { align-self: flex-start; color: var(--moss); font-size: 18px; line-height: 1; }
+.badges-all-link { margin-top: 16px; }
 .tag-list { display: flex; flex-wrap: wrap; gap: 8px; }
 .tag-list span { padding: 6px 10px; border: 1px solid var(--rule); color: var(--ink-soft); font-size: 13px; }
 .toolkit-groups { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 24px 28px; }
@@ -211,6 +221,7 @@ h1, h2, h3, h4 { text-wrap: balance; }
   .research-card { min-height: 0; }
   .entry-list li { display: block; }
   .toolkit-groups { gap: 20px; }
+  .badge-grid { grid-template-columns: 1fr; }
   .open-source-list { gap: 0 18px; }
   .entry-meta { display: block; margin: 8px 0; }
   .entry-list p { margin-top: 8px; }
