@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=20261023b" />
+  <link rel="stylesheet" href="styles.css?v=20261023c" />
   <script src="script.js" defer></script>
 </head>
 <body>
@@ -38,8 +38,7 @@
     <nav class="page-nav wrap" aria-label="Jump to">
       <span>Jump to</span>
       <a href="#team">NYUSEC</a>
-      <a href="#writeups">Writeups</a>
-      <a href="#competitions">Other Competitions</a>
+      <a href="#competitions">Competitions</a>
     </nav>
 
     <section class="ctf-section" id="team" aria-labelledby="team-title">
@@ -60,89 +59,33 @@
       </div>
     </section>
 
-    <section class="work-section wrap" id="writeups" aria-labelledby="writeups-title">
-      <div class="section-heading"><div><h2 id="writeups-title">Writeups</h2><p class="writeups-description">Notes and walkthroughs from CTF challenges.</p></div></div>
-      <div class="ctf-content ctf-archive">
-        <article class="ctf-event" aria-labelledby="bsides-event-title">
-          <header class="ctf-event-header">
-            <div>
-              <h3 id="bsides-event-title">BSidesNYC CTF</h3>
-              <p class="ctf-event-placement">7th place in Open Division</p>
-              <p class="ctf-event-context">110+ participants</p>
-              <p class="ctf-event-context">Domestic competition</p>
-            </div>
-            <span class="ctf-event-date">October 17, 2026</span>
-          </header>
-          <a class="ctf-challenge" href="writeups/2026/bsidesnyc-ctf/classified/classified.html">
-            <span class="ctf-challenge-title">Classified</span>
-            <span class="ctf-challenge-category">Forensics and reverse engineering</span>
-            <span class="ctf-challenge-link">Read writeup</span>
-          </a>
-          <p class="ctf-archive-note">Follow the CipherWiki trail, decode a document path, and inspect the OC-7 memo.</p>
-          <a class="ctf-challenge" href="writeups/2026/bsidesnyc-ctf/bots/bots.html">
-            <span class="ctf-challenge-title">Bots</span>
-            <span class="ctf-challenge-category">Forensics, OSINT, and wiki</span>
-            <span class="ctf-challenge-link">Read writeup</span>
-          </a>
-          <p class="ctf-archive-note">Compare rapid replies on two CipherWiki talk pages to identify coordinated accounts.</p>
-          <a class="ctf-challenge" href="writeups/2026/bsidesnyc-ctf/compromised-source/compromised-source.html">
-            <span class="ctf-challenge-title">Compromised Source</span>
-            <span class="ctf-challenge-category">Forensics and wiki</span>
-            <span class="ctf-challenge-link">Read writeup</span>
-          </a>
-          <p class="ctf-archive-note">Trace an insider’s unusual knowledge on the Sentinel talk page and decode a hidden flag.</p>
-        </article>
-        <article class="ctf-event" aria-labelledby="jersey-event-title">
-          <header class="ctf-event-header">
-            <div>
-              <h3 id="jersey-event-title">JerseyCTF VI</h3>
-              <p class="ctf-event-placement">4th place in Academic Division</p>
-              <p class="ctf-event-context">1,300+ participants</p>
-              <p class="ctf-event-context">International competition</p>
-            </div>
-            <span class="ctf-event-date">April 18–19, 2026</span>
-          </header>
-          <a class="ctf-challenge" href="writeups/2026/jerseyCTF-vi/recovered-signal-file/recovered-signal-file.html">
-            <span class="ctf-challenge-title">Recovered Signal File</span>
-            <span class="ctf-challenge-category">Forensics and encoding</span>
-            <span class="ctf-challenge-link">Read writeup</span>
-          </a>
-          <p class="ctf-archive-note">Decode a recovered transmission with Base64 and a Caesar shift to reveal the flag.</p>
-          <a class="ctf-challenge" href="writeups/2026/jerseyCTF-vi/qastah-nuq/qastah-nuq.html">
-            <span class="ctf-challenge-title">qaStaH nuq</span>
-            <span class="ctf-challenge-category">Forensics and network analysis</span>
-            <span class="ctf-challenge-link">Read writeup</span>
-          </a>
-          <p class="ctf-archive-note">Filter the packet capture to one HTTP exchange, then decode its response body.</p>
-          <a class="ctf-challenge" href="writeups/2026/jerseyCTF-vi/fix-your-ship/fix-your-ship.html">
-            <span class="ctf-challenge-title">Fix Your Ship</span>
-            <span class="ctf-challenge-category">Digital forensics and file repair</span>
-            <span class="ctf-challenge-link">Read writeup</span>
-          </a>
-          <p class="ctf-archive-note">Repair a PNG, JPEG, and MP4, then combine the clues in the recovered files.</p>
-          <a class="ctf-challenge" href="writeups/2026/jerseyCTF-vi/relay-artifact-tx-7/relay-artifact-tx-7.html">
-            <span class="ctf-challenge-title">Relay Artifact TX-7</span>
-            <span class="ctf-challenge-category">Cryptography and RSA</span>
-            <span class="ctf-challenge-link">Read writeup</span>
-          </a>
-          <p class="ctf-archive-note">Exploit a shared RSA prime to recover the private key and decrypt the relay.</p>
-        </article>
-      </div>
-    </section>
-
     <section class="work-section wrap" id="competitions" aria-labelledby="competitions-title">
-      <div class="section-heading"><div><h2 id="competitions-title">Other Competitions</h2><p>Team recognition from cybersecurity competitions.</p></div></div>
-      <div class="ctf-content">
-        <article class="ctf-event" aria-labelledby="isaca-title">
-          <header class="ctf-event-header">
-            <div>
-              <h3 id="isaca-title"><a href="isaca-competition.html">ISACA Global Cybersecurity Case Study Competition</a></h3>
-              <p class="ctf-event-placement">1st place</p>
-            </div>
-          </header>
+      <div class="section-heading"><div><h2 id="competitions-title">Competitions</h2><p>Results, challenge writeups, and case studies.</p></div></div>
+      <div class="competition-grid">
+        <a class="competition-card" href="bsidesnyc-competition.html">
+          <span class="ctf-event-date">October 17, 2026</span>
+          <h3>BSidesNYC CTF</h3>
+          <p class="ctf-event-placement">7th place in Open Division</p>
+          <p class="ctf-event-context">110+ participants</p>
+          <p class="ctf-event-context">Domestic competition</p>
+          <span class="competition-card-link">Explore writeups <span aria-hidden="true">↗</span></span>
+        </a>
+        <a class="competition-card" href="jerseyctf-competition.html">
+          <span class="ctf-event-date">April 18–19, 2026</span>
+          <h3>JerseyCTF VI</h3>
+          <p class="ctf-event-placement">4th place in Academic Division</p>
+          <p class="ctf-event-context">1,300+ participants</p>
+          <p class="ctf-event-context">International competition</p>
+          <span class="competition-card-link">Explore writeups <span aria-hidden="true">↗</span></span>
+        </a>
+        <a class="competition-card" href="isaca-competition.html">
+          <span class="ctf-event-date">January–May 2026</span>
+          <h3>ISACA Global Cybersecurity Case Study Competition</h3>
+          <p class="ctf-event-placement">1st place</p>
           <p class="ctf-event-context">International competition</p>
           <p class="ctf-archive-note">First-place team award, including an academic scholarship.</p>
-        </article>
+          <span class="competition-card-link">Read the case study <span aria-hidden="true">↗</span></span>
+        </a>
       </div>
     </section>
   </main>
