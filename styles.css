@@ -158,8 +158,18 @@ h1, h2, h3, h4 { text-wrap: balance; }
 .toolkit-groups { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 24px 28px; }
 .toolkit-group { min-width: 0; }
 .toolkit-group h3 { margin: 0 0 12px; color: var(--moss); font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; }
-.open-source-list { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 0 26px; margin: 0; padding: 0; border-top: 1px solid var(--rule); list-style: none; }
-.open-source-list li { padding: 11px 0; border-bottom: 1px solid var(--rule); color: var(--ink-soft); font-size: 15px; }
+.svg-defs { position: absolute; width: 0; height: 0; overflow: hidden; }
+.open-source-list { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 0 26px; margin: 24px 0 0; padding: 0; border-top: 1px solid var(--rule); list-style: none; }
+.open-source-item { min-width: 0; padding: 18px 0 20px; border-bottom: 1px solid var(--rule); }
+.open-source-heading { display: flex; align-items: center; gap: 11px; }
+.open-source-icon { flex: none; width: 34px; height: 34px; padding: 6px; border: 1px solid var(--rule); color: var(--moss); background: var(--paper-light); }
+.open-source-heading h3 { margin: 0; font: 600 22px/1.1 var(--serif); }
+.open-source-repo { color: var(--ink-soft); font: 11px/1.4 var(--mono); }
+.open-source-item p { margin: 14px 0; color: var(--ink-soft); font-size: 13px; line-height: 1.55; }
+.open-source-prs { display: flex; flex-wrap: wrap; align-items: center; gap: 7px; }
+.open-source-prs span { width: 100%; color: var(--moss); font-size: 11px; font-weight: 600; letter-spacing: .07em; text-transform: uppercase; }
+.open-source-prs a { padding: 2px 6px; border: 1px solid var(--rule); color: var(--moss); font: 11px/1.5 var(--mono); }
+.open-source-prs a:hover { border-color: var(--moss); background: var(--stone); }
 .page-actions { margin-top: 20px; gap: 10px 22px; }
 .page-actions .inline-link { font-size: 14px; overflow-wrap: anywhere; }
 .resume-intro { display: grid; grid-template-columns: minmax(0,1fr); align-items: start; }
