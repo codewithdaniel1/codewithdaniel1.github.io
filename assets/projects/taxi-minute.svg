@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="300" viewBox="0 0 520 300" role="img" aria-labelledby="title desc">
+  <title id="title">Taxi-Minute MLOps pipeline</title>
+  <desc id="desc">Monthly NYC taxi records flow through validation and a model release gate to a browser map that predicts trip duration.</desc>
+  <defs>
+    <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M28 0H0V28" fill="none" stroke="#d8dbd0" stroke-width=".7"/></pattern>
+    <marker id="arrow" markerWidth="7" markerHeight="7" refX="5.5" refY="3.5" orient="auto"><path d="M0 0 7 3.5 0 7z" fill="#a37157"/></marker>
+  </defs>
+  <rect width="520" height="300" fill="#ebe6d9"/><rect width="520" height="300" fill="url(#grid)"/>
+  <rect x="28" y="24" width="464" height="252" fill="#faf9f4" stroke="#cdd2c5"/>
+  <text x="48" y="50" fill="#24352c" font-family="IBM Plex Mono,monospace" font-size="10" letter-spacing="1.3">TAXI-MINUTE / WEEKLY MLOPS PIPELINE</text>
+  <path d="M48 64h424" stroke="#cdd2c5"/>
+  <g fill="#496a53" font-family="IBM Plex Mono,monospace" font-size="8" letter-spacing=".5">
+    <text x="48" y="91">PUBLIC DATA</text><text x="177" y="91">MODEL RELEASE</text><text x="344" y="91">USER PREDICTION</text>
+  </g>
+  <rect x="46" y="104" width="112" height="107" fill="#f4f2ea" stroke="#cdd2c5"/>
+  <text x="58" y="128" fill="#24352c" font-family="DM Sans,Arial,sans-serif" font-size="10" font-weight="600">NYC TLC</text>
+  <text x="58" y="145" fill="#4f5e54" font-family="DM Sans,Arial,sans-serif" font-size="9">Monthly trips</text>
+  <g stroke="#cdd2c5" stroke-width="3" stroke-linecap="round"><path d="M59 164h76M59 176h58M59 188h68"/></g>
+  <path d="M159 158h17" fill="none" stroke="#a37157" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="184" y="104" width="125" height="107" fill="#f4f2ea" stroke="#cdd2c5"/>
+  <text x="197" y="128" fill="#496a53" font-family="IBM Plex Mono,monospace" font-size="7">GITHUB ACTIONS</text>
+  <text x="197" y="151" fill="#24352c" font-family="DM Sans,Arial,sans-serif" font-size="10" font-weight="600">Train + validate</text>
+  <path d="M198 166h93" stroke="#718368" stroke-width="5" stroke-linecap="round"/>
+  <text x="197" y="190" fill="#4f5e54" font-family="DM Sans,Arial,sans-serif" font-size="8">Promote only if checks pass</text>
+  <path d="M310 158h17" fill="none" stroke="#a37157" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="335" y="104" width="139" height="107" fill="#f4f2ea" stroke="#cdd2c5"/>
+  <text x="348" y="128" fill="#496a53" font-family="IBM Plex Mono,monospace" font-size="7">BROWSER INFERENCE</text>
+  <path d="M350 143h105v45H350z" fill="#ebe6d9" stroke="#cdd2c5"/>
+  <path d="M360 174l13-13 10 8 12-14 12 11 12-7 17 14" fill="none" stroke="#718368" stroke-width="1.6"/>
+  <circle cx="383" cy="162" r="3" fill="#a37157"/><circle cx="419" cy="160" r="3" fill="#a37157"/>
+  <text x="348" y="202" fill="#4f5e54" font-family="DM Sans,Arial,sans-serif" font-size="8">Map → estimated minutes</text>
+  <path d="M48 230h424" stroke="#cdd2c5"/>
+  <text x="48" y="253" fill="#496a53" font-family="IBM Plex Mono,monospace" font-size="8" letter-spacing=".6">DATA CHECKS · TIME-BASED VALIDATION · AUTOMATED RELEASE</text>
+</svg>
