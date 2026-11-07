@@ -320,7 +320,7 @@ h1, h2, h3, h4 { text-wrap: balance; }
   .tag-list span { padding:4px 6px; font-size:7pt; }
 }
 
-.competition-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 24px; }
+.competition-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 24px; }
 .competition-card { display: flex; flex-direction: column; padding: 26px; border-top: 2px solid var(--olive); background: var(--paper-light); }
 .competition-card:hover { background: var(--stone); }
 .competition-card .ctf-event-date { align-self: flex-start; margin-bottom: 18px; text-align: left; }
