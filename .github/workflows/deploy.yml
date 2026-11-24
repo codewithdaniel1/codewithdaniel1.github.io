@@ -5,30 +5,60 @@ on:
     branches: [main]
   workflow_dispatch:
 
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+permissions: {}
 
 concurrency:
   group: pages
   cancel-in-progress: true
 
 jobs:
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  package:
+    permissions:
+      contents: read
+      pages: read
     runs-on: ubuntu-latest
+    outputs:
+      artifact_id: ${{ steps.upload.outputs.artifact_id }}
     steps:
       - name: Check out source
         uses: actions/checkout@v4
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
       - name: Upload static site
+        id: upload
         uses: actions/upload-pages-artifact@v3
         with:
           path: .
+
+  deploy:
+    needs: package
+    permissions:
+      actions: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Wait for the uploaded site to be available
+        timeout-minutes: 2
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ARTIFACT_ID: ${{ needs.package.outputs.artifact_id }}
+        run: |
+          # The upload can finish before GitHub lists the artifact for this run.
+          for attempt in {1..12}; do
+            if gh api "repos/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID/artifacts?name=github-pages" \
+                --jq '.artifacts[] | select(.expired == false) | .id' | grep -Fx -- "$ARTIFACT_ID"; then
+              exit 0
+            fi
+            if [ "$attempt" -lt 12 ]; then
+              sleep 5
+            fi
+          done
+          echo "::error::GitHub did not list the uploaded Pages artifact in time."
+          exit 1
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
