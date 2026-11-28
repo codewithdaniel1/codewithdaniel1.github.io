@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f4f2ea" />
+  <meta name="description" content="Decode a GIF comment and reconstruct the flag from a five-by-five pixel font." />
+  <title>Beyond the Surface | CTF Writeup | Daniel Peng</title>
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../../../styles.css?v=20261023c" />
+  <style>.prose code { overflow-wrap: anywhere; }</style><script src="../../../../script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><div class="header-inner wrap"><a class="brand" href="../../../../home.html" aria-label="Daniel Peng, home"><span class="brand-mark">dp<span class="brand-period">.</span></span><span class="brand-name">Daniel Peng</span></a><nav class="site-nav" aria-label="Main navigation"><a href="../../../../home.html">Home</a><a href="../../../../project.html">Project</a><a href="../../../../research.html">Research</a><a href="../../../../competition.html">Competitions</a></nav></div></header>
+  <main class="inner-main wrap prose" id="main">
+    <a class="back-link" href="../../../../competitions/n0v4ctf-2026.html#writeups" data-back-to-ctf>← Back to N0v4CTF 2026 writeups</a>
+    <header class="inner-hero"><p class="section-index">CTF WRITEUP / N0v4CTF 2026</p><div><h1>Beyond the Surface<span class="period">.</span></h1><p class="lead">Decode a GIF comment and reconstruct the flag from a five-by-five pixel font.</p><div class="article-meta"><span>Forensics</span><span>Easy</span><span>Challenge by zeroD</span></div></div></header>
+    <section class="inner-section"><h2>Inspect the GIF</h2><div class="section-content"><p>The ZIP contained a single animated GIF. The animation appeared to show a security camera. Running <code>exiftool -b -Comment chall.gif</code> revealed a GIF comment containing <code>eval(atob(&quot;…&quot;))</code>. The <code>atob</code> call identified the quoted text as Base64.</p></div></section>
+    <section class="inner-section"><h2>Reconstruct the lettering</h2><div class="section-content"><p>Decoding the Base64 as text revealed JavaScript that draws characters on a canvas. The array named <code>m</code> stores each character as five numbers. Each number describes one row of a five-by-five pixel grid. For example, the row value 17 becomes <code>10001</code> in binary, lighting the first and last pixels.</p><p>I read the top row across all characters, then repeated the process for each of the remaining four rows. The reconstructed message included two digits that are easy to misread. Both <code>1</code> characters have a base, and the <code>0</code> in <code>N0T</code> has a diagonal stroke.</p></div></section>
+    <section class="inner-section"><h2>Recovered flag</h2><div class="section-content"><p><code>NVR{G1F_1S_N0T_HTML}</code></p><p><a href="beyond-the-surface.pdf" download>Download this writeup as a PDF</a>.</p></div></section>
+  </main>
+<footer class="site-footer"><div class="wrap footer-inner"><span>© Daniel Peng · New York</span><a href="../../../../competitions/n0v4ctf-2026.html#writeups" data-back-to-ctf>← Back to N0v4CTF 2026 writeups</a></div></footer>
+</body>
+</html>
