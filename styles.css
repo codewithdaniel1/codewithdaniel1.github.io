@@ -170,6 +170,9 @@ h1, h2, h3, h4 { text-wrap: balance; }
 .entry-list h3 a:hover { color: var(--moss); text-decoration-color: var(--moss); }
 .entry-list p { grid-column: 1 / -1; margin: 0; font-size: 14px; }
 .entry-meta { align-self: baseline; color: var(--moss); font-size: 11px; font-weight: 500; }
+.education-credentials { grid-column: 1 / -1; display: grid; gap: 12px; margin: 8px 0 0; margin-inline-start: clamp(10px, 2vw, 18px); }
+.education-credentials dt { color: var(--moss); font-size: 15px; font-weight: 700; }
+.education-credentials dd { margin: 2px 0 0; color: var(--ink-soft); font-size: 16px; line-height: 1.5; }
 .experience-list > li { display: block; }
 .experience-roles { display: grid; gap: 16px; margin-top: 12px; margin-inline-start: clamp(10px, 2vw, 18px); }
 .experience-role + .experience-role { padding-top: 16px; border-top: 1px solid var(--rule); }
@@ -333,6 +336,8 @@ h1, h2, h3, h4 { text-wrap: balance; }
   .experience-details > div { grid-template-columns:72px 1fr; padding:0; border:0; background:none !important; }
   .experience-details dt, .experience-details dd { font-size:8pt; }
   .entry-meta { font-size:7pt; }
+  .education-credentials { gap:6px; margin-top:4px; }
+  .education-credentials dt, .education-credentials dd { font-size:9pt; }
   .tag-list span { padding:4px 6px; font-size:7pt; }
 }
 
