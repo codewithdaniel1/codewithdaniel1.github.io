@@ -171,7 +171,7 @@ h1, h2, h3, h4 { text-wrap: balance; }
 .entry-list p { grid-column: 1 / -1; margin: 0; font-size: 14px; }
 .entry-meta { align-self: baseline; color: var(--moss); font-size: 11px; font-weight: 500; }
 .experience-list > li { display: block; }
-.experience-roles { display: grid; gap: 16px; margin-top: 12px; }
+.experience-roles { display: grid; gap: 16px; margin-top: 12px; margin-inline-start: clamp(10px, 2vw, 18px); }
 .experience-role + .experience-role { padding-top: 16px; border-top: 1px solid var(--rule); }
 .experience-role-title { margin: 0 0 10px; color: var(--ink); font: 600 23px/1.25 var(--serif); text-wrap: initial; }
 .experience-details { display: grid; gap: 8px; margin: 0; }
